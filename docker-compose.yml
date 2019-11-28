@@ -2,7 +2,8 @@ version: '3'
 
 services:
   wso2is:
-    image: wso2/wso2is:5.8.0
+    build: .
+    image: identityorg/wso2is58:1.0
     ports:
       - 443:9443
     volumes:
