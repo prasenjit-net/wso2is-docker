@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  wso2is:
+    image: wso2/wso2is:5.8.0
+    ports:
+      - 443:9443
+    volumes:
+      - repository:/home/wso2carbon/wso2is-5.8.0/repository/
+    networks: 
+      wso2cluster: {}
+      default: {}
+
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "80:8080"
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+volumes:
+  repository:
+
+networks:
+  wso2cluster:
+    ipam: 
+      driver: default
+      config:
+        - subnet: 172.28.1.0/16
