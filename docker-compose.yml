@@ -2,7 +2,6 @@ version: '3'
 
 services:
   wso2is:
-    build: .
     image: identityorg/wso2is58:1.0
     ports:
       - 443:9443
@@ -12,6 +11,18 @@ services:
       wso2cluster: {}
       default: {}
 
+  mysql:
+    image: mysql:8
+    networks:
+      - default
+    ports:
+       - "3306:3306"  
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=db
+    volumes:
+      - ./mysql-init.sql:/tmp/mysql-init.sql
+    command: mysqld --init-file="/tmp/mysql-init.sql"
 
   visualizer:
     image: dockersamples/visualizer:stable
