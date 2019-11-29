@@ -7,12 +7,13 @@ services:
       - 443:9443
     volumes:
       - repository:/home/wso2carbon/wso2is-5.8.0/repository/
+      - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
     networks: 
       wso2cluster: {}
       default: {}
 
   mysql:
-    image: mysql:8
+    image: mysql:5
     networks:
       - default
     ports:
@@ -20,9 +21,11 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=mysql
       - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
     volumes:
-      - ./mysql-init.sql:/tmp/mysql-init.sql
-    command: mysqld --init-file="/tmp/mysql-init.sql"
+      - ./mysql-init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
+      - mysqldata:/var/lib/mysql/
 
   visualizer:
     image: dockersamples/visualizer:stable
@@ -37,8 +40,11 @@ services:
 
 volumes:
   repository:
+  mysqldata:
+  tenants:
 
 networks:
+  default:
   wso2cluster:
     ipam: 
       driver: default
