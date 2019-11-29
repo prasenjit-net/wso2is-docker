@@ -14,9 +14,9 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
     volumes:
-      - ./mysql-init.sql:/tmp/mysql-init.sql
+      - ./mysql-init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
       - mysqldata:/var/lib/mysql/
-    command: mysqld --init-file="/tmp/mysql-init.sql"
+#    command: mysqld --init-file="/tmp/mysql-init.sql"
 
 volumes: 
   mysqldata:
