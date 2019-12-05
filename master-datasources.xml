@@ -14,7 +14,7 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql//mysql:3306/db</url>
+                    <url>jdbc:mysql://mysql:3306/db</url>
                     <username>user</username>
                     <password>pass</password>
                     <driverClassName>com.mysql.cj.jdbc.Driver</driverClassName>

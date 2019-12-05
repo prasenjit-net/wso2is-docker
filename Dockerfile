@@ -7,4 +7,6 @@ COPY --chown=wso2carbon:wso2 ./email-admin-config.xml ${WSO2_SERVER_HOME}/reposi
 COPY --chown=wso2carbon:wso2 ./identity.xml ${WSO2_SERVER_HOME}/repository/conf/identity/
 COPY --chown=wso2carbon:wso2 ./master-datasources.xml ${WSO2_SERVER_HOME}/repository/conf/datasources/
 COPY --chown=wso2carbon:wso2 ./user-mgt.xml ${WSO2_SERVER_HOME}/repository/conf/
+COPY --chown=wso2carbon:wso2 ./registry.xml ${WSO2_SERVER_HOME}/repository/conf/
 
+COPY --chown=wso2carbon:wso2 ./mysql-connector-java-8.0.18.jar ${WSO2_SERVER_HOME}/repository/components/lib/

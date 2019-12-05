@@ -2,9 +2,12 @@ version: '3'
 
 services:
   wso2is:
+    build: .
     image: identityorg/wso2is58:1.0
     ports:
       - 443:9443
+    depends_on:
+      - mysql
     volumes:
       - repository:/home/wso2carbon/wso2is-5.8.0/repository/
       - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
@@ -24,7 +27,7 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
     volumes:
-      - ./mysql-init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
+      - ./scripts/:/docker-entrypoint-initdb.d/
       - mysqldata:/var/lib/mysql/
 
   visualizer:
@@ -34,9 +37,9 @@ services:
     stop_grace_period: 1m30s
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-    deploy:
-      placement:
-        constraints: [node.role == manager]
+    # deploy:
+    #   placement:
+    #     constraints: [node.role == manager]
 
 volumes:
   repository:
