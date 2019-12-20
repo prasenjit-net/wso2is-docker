@@ -605,7 +605,7 @@
     </phaseOrder>
 
     <clustering class="org.wso2.carbon.core.clustering.hazelcast.HazelcastClusteringAgent"
-                enable="false">
+                enable="true">
 
         <!--
            This parameter indicates whether the cluster has to be automatically initalized
@@ -656,7 +656,7 @@
         -->
         <!-- The host name or IP address of this member -->
 
-        <parameter name="localMemberHost">127.0.0.1</parameter>
+        <parameter name="localMemberHost">wso2is</parameter>
 
         <!--
             The bind adress of this member. The difference between localMemberHost & localMemberBindAddress
