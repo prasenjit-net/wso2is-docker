@@ -1,0 +1,99 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 443:443
+    volumes:
+      - ./nginx/:/etc/nginx/
+    networks: 
+      wso2cluster:
+        ipv4_address: 172.28.5.66
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 2
+        delay: 2m30s
+      restart_policy:
+        condition: on-failure
+
+  wso2is10:
+    image: identityorg/wso2is58:1.0
+    # ports:
+    #   - 443:9443
+    depends_on:
+      - mysql
+    volumes:
+#      - repository:/home/wso2carbon/wso2is-5.8.0/repository/
+      - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
+      - ./axis-cluster/axis2-10.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
+    networks: 
+      wso2cluster:
+        ipv4_address: 172.28.5.10
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 2
+        delay: 1m30s
+      restart_policy:
+        condition: on-failure
+
+  wso2is11:
+    image: identityorg/wso2is58:1.0
+    # ports:
+    #   - 444:9443
+    depends_on:
+      - mysql
+    volumes:
+#      - repository:/home/wso2carbon/wso2is-5.8.0/repository/
+      - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
+      - ./axis-cluster/axis2-11.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
+    networks: 
+      wso2cluster:
+        ipv4_address: 172.28.5.11
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 2
+        delay: 1m30s
+      restart_policy:
+        condition: on-failure
+
+  mysql:
+    image: mysql:5
+    networks:
+      - wso2cluster
+    ports:
+       - "3306:3306"  
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+    volumes:
+      - ./scripts/:/docker-entrypoint-initdb.d/
+      - mysqldata:/var/lib/mysql/
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+volumes:
+#  repository:
+  mysqldata:
+  tenants:
+
+networks:
+  wso2cluster:
+    ipam: 
+      driver: default
+      config:
+        - subnet: 172.28.5.0/24
