@@ -19,7 +19,7 @@ services:
         condition: on-failure
 
   wso2is10:
-    image: identityorg/wso2is58:1.0
+    image: identityorg/wso2is58:1.1
     # ports:
     #   - 443:9443
     depends_on:
@@ -40,7 +40,7 @@ services:
         condition: on-failure
 
   wso2is11:
-    image: identityorg/wso2is58:1.0
+    image: identityorg/wso2is58:1.1
     # ports:
     #   - 444:9443
     depends_on:
