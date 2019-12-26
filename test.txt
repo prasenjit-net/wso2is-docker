@@ -1,0 +1,1 @@
+https://localhost/oauth2/authorize?client_id=q1f_EctQYpjTDv8RfVOUSzynZvsa&redirect_uri=http://localhost:8080/callback&scope=openid&response_type=code

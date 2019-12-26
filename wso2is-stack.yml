@@ -5,6 +5,9 @@ services:
     image: nginx
     ports:
       - 443:443
+    depends_on:
+      - wso2is10
+      - wso2is11
     volumes:
       - ./nginx/:/etc/nginx/
     networks: 
@@ -20,8 +23,6 @@ services:
 
   wso2is10:
     image: identityorg/wso2is58:1.1
-    # ports:
-    #   - 443:9443
     depends_on:
       - mysql
     volumes:
@@ -41,8 +42,6 @@ services:
 
   wso2is11:
     image: identityorg/wso2is58:1.1
-    # ports:
-    #   - 444:9443
     depends_on:
       - mysql
     volumes:
@@ -74,17 +73,6 @@ services:
     volumes:
       - ./scripts/:/docker-entrypoint-initdb.d/
       - mysqldata:/var/lib/mysql/
-
-  visualizer:
-    image: dockersamples/visualizer:stable
-    ports:
-      - "8080:8080"
-    stop_grace_period: 1m30s
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-    deploy:
-      placement:
-        constraints: [node.role == manager]
 
 volumes:
 #  repository:
