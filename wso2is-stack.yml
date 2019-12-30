@@ -11,8 +11,7 @@ services:
     volumes:
       - ./nginx/:/etc/nginx/
     networks: 
-      wso2cluster:
-        ipv4_address: 172.28.5.66
+      - wso2cluster
     deploy:
       replicas: 1
       update_config:
@@ -28,10 +27,9 @@ services:
     volumes:
 #      - repository:/home/wso2carbon/wso2is-5.8.0/repository/
       - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
-      - ./axis-cluster/axis2-10.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
+#      - ./axis-cluster/axis2-10.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
     networks: 
-      wso2cluster:
-        ipv4_address: 172.28.5.10
+      - wso2cluster
     deploy:
       replicas: 1
       update_config:
@@ -47,10 +45,9 @@ services:
     volumes:
 #      - repository:/home/wso2carbon/wso2is-5.8.0/repository/
       - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
-      - ./axis-cluster/axis2-11.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
+#      - ./axis-cluster/axis2-11.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
     networks: 
-      wso2cluster:
-        ipv4_address: 172.28.5.11
+      - wso2cluster
     deploy:
       replicas: 1
       update_config:

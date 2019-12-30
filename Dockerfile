@@ -11,5 +11,8 @@ COPY --chown=wso2carbon:wso2 ./wso2is/user-mgt.xml ${WSO2_SERVER_HOME}/repositor
 COPY --chown=wso2carbon:wso2 ./wso2is/registry.xml ${WSO2_SERVER_HOME}/repository/conf/
 COPY --chown=wso2carbon:wso2 ./wso2is/embedded-ldap.xml ${WSO2_SERVER_HOME}/repository/conf/identity/
 COPY --chown=wso2carbon:wso2 ./wso2is/catalina-server.xml ${WSO2_SERVER_HOME}/repository/conf/tomcat/
+COPY --chown=wso2carbon:wso2 ./wso2is/health-check-config.xml ${WSO2_SERVER_HOME}/repository/conf/
 
 COPY --chown=wso2carbon:wso2 ./wso2is/mysql-connector-java-8.0.18.jar ${WSO2_SERVER_HOME}/repository/components/lib/
+
+HEALTHCHECK --interval=30s --retries=3 --start-period=30s --timeout=30s CMD curl -k https://localhost:9443/api/health-check/v1.0/health || false
