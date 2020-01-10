@@ -1,0 +1,80 @@
+version: "3.7"
+
+services:
+  traefik:
+    image: traefik:v2.1
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml
+      - ./nginx/ssl/:/etc/traefik/ssl/
+    networks:
+      - wso2cluster
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.role == manager
+
+  wso2is:
+    image: identityorg/wso2is58:1.1
+    depends_on:
+      - mysql
+    volumes:
+      # - repository:/home/wso2carbon/wso2is-5.8.0/repository/
+      - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
+      # - ./axis-cluster/axis2-10.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
+    networks:
+      - wso2cluster
+    labels:
+      - "enabletraefik=true"
+      - "traefik.http.middlewares.wso2is-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.wso2is-web.middlewares=wso2is-redirect"
+      - "traefik.http.routers.wso2is-web.rule=Host(`localhost`)"
+      - "traefik.http.routers.wso2is-web.entrypoints=web"
+      - "traefik.http.routers.wso2is.rule=Host(`localhost`)"
+      - "traefik.http.routers.wso2is.entrypoints=websecure"
+      - "traefik.http.routers.wso2is.tls=true"
+      - "traefik.http.services.wso2is-service.loadbalancer.server.port=9443"
+      - "traefik.http.services.wso2is-service.loadbalancer.server.scheme=https"
+      - "traefik.http.services.wso2is-service.loadbalancer.sticky=true"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+      restart_policy:
+        condition: on-failure
+
+  mysql:
+    image: mysql:5
+    networks:
+      - wso2cluster
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+    volumes:
+      - ./scripts/:/docker-entrypoint-initdb.d/
+      - mysqldata:/var/lib/mysql/
+
+volumes:
+  #  repository:
+  mysqldata:
+  tenants:
+
+networks:
+  wso2cluster:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.5.0/24
