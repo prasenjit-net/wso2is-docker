@@ -14,7 +14,7 @@ services:
     networks:
       - wso2cluster
     deploy:
-      replicas: 1
+      mode: global
       update_config:
         parallelism: 1
       restart_policy:
@@ -27,10 +27,6 @@ services:
     image: identityorg/wso2is58:1.1
     depends_on:
       - mysql
-    volumes:
-      # - repository:/home/wso2carbon/wso2is-5.8.0/repository/
-      - tenants:/home/wso2carbon/wso2is-5.8.0/tenants/
-      # - ./axis-cluster/axis2-10.xml:/home/wso2carbon/wso2is-5.8.0/repository/conf/axis2/axis2.xml
     networks:
       - wso2cluster
     labels:
@@ -54,6 +50,62 @@ services:
         parallelism: 1
       restart_policy:
         condition: on-failure
+    configs:
+      - source: carbon
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/carbon.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: email-admin-config
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/email/email-admin-config.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: identity
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/identity/identity.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: master-datasources
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/datasources/master-datasources.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: bps-datasources
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/datasources/bps-datasources.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: metrics-datasources
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/datasources/metrics-datasources.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: user-mgt
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/user-mgt.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: registry
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/registry.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: embedded-ldap
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/identity/embedded-ldap.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: catalina-server
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/tomcat/catalina-server.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
+      - source: health-check-config
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/health-check-config.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
 
   mysql:
     image: mysql:5
@@ -71,9 +123,7 @@ services:
       - mysqldata:/var/lib/mysql/
 
 volumes:
-  #  repository:
   mysqldata:
-  tenants:
 
 networks:
   wso2cluster:
@@ -81,3 +131,27 @@ networks:
       driver: default
       config:
         - subnet: 172.28.5.0/24
+
+configs:
+  carbon:
+    file: ./wso2is/carbon.xml
+  email-admin-config:
+    file: ./wso2is/email-admin-config.xml
+  identity:
+    file: ./wso2is/identity.xml
+  master-datasources:
+    file: ./wso2is/master-datasources.xml
+  bps-datasources:
+    file: ./wso2is/bps-datasources.xml
+  metrics-datasources:
+    file: ./wso2is/metrics-datasources.xml
+  user-mgt:
+    file: ./wso2is/user-mgt.xml
+  registry:
+    file: ./wso2is/registry.xml
+  embedded-ldap:
+    file: ./wso2is/embedded-ldap.xml
+  catalina-server:
+    file: ./wso2is/catalina-server.xml
+  health-check-config:
+    file: ./wso2is/health-check-config.xml
