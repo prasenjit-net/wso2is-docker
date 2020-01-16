@@ -45,6 +45,9 @@ services:
       - "traefik.http.services.wso2is-service.loadbalancer.server.port=9443"
       - "traefik.http.services.wso2is-service.loadbalancer.server.scheme=https"
       - "traefik.http.services.wso2is-service.loadbalancer.sticky=true"
+      - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.name=traefik_xxx_cookie"
+      - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.httpOnly=true"
+      - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.secure=true"
     deploy:
       replicas: 2
       update_config:
