@@ -1,9 +1,11 @@
-accessLog: {}
+# accessLog: {}
 providers:
   docker:
     constraints: "Label(`enabletraefik`,`true`)"
     # swarmMode: true
     # network: wso2cluster
+  file:
+    filename: /etc/traefik/traefik-dyn.yml
 api:
   dashboard: true
   insecure: true
@@ -15,10 +17,6 @@ entryPoints:
     address: ":80"
   websecure:
     address: ":443"
-tls:
-  certificates:
-    - certFile: /etc/traefik/ssl/localhost.cert
-      keyFile: /etc/traefik/ssl/localhost.key
 ## Static configuration
 serversTransport:
   insecureSkipVerify: true

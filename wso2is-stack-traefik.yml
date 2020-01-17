@@ -9,8 +9,9 @@ services:
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./traefik/traefik.yml:/etc/traefik/traefik.yml
-      - ./nginx/ssl/:/etc/traefik/ssl/
+    secrets:
+      - traefik-cer
+      - traefik-key
     networks:
       - wso2cluster
     deploy:
@@ -22,6 +23,13 @@ services:
       placement:
         constraints:
           - node.role == manager
+    configs:
+      - source: traefik
+        target: /etc/traefik/traefik.yml
+        mode: 0440
+      - source: traefik-dyn
+        target: /etc/traefik/traefik-dyn.yml
+        mode: 0440
 
   wso2is:
     image: identityorg/wso2is58:1.1
@@ -155,3 +163,13 @@ configs:
     file: ./wso2is/catalina-server.xml
   health-check-config:
     file: ./wso2is/health-check-config.xml
+  traefik:
+    file: ./traefik/traefik.yml
+  traefik-dyn:
+    file: ./traefik/traefik-dyn.yml
+
+secrets:
+  traefik-key:
+    file: ./traefik/ssl/localhost.key
+  traefik-cer:
+    file: ./traefik/ssl/localhost.cer
