@@ -1,0 +1,4 @@
+@startuml deployment non production
+    title "WSO2IS Non Production Deployment Diagram"
+    
+@enduml

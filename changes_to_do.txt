@@ -1,16 +1,24 @@
-0. Create repository and import base code for all customized code
-0.1 Postman collection for Reseller
-1. Login screen war project
-2. UM_USER_CONSUMER will stay as backup, but we will try to migrate first and check required time
-3. Custom use store LDAP will come
+0. Create repository and import base code for all customized code                                       F
+0.1 Postman collection for Reseller                                                                     F
+1. Login screen war project                                                                             F
+2. UM_USER_CONSUMER will stay as backup, but we will try to migrate first and check required time       F1
+3. Custom use store LDAP will come                                                                      L
 4. In case point 2 fall back JDBC user store will come too
-5. b2c_identity_framework bring changed code to new repository		*
+5. b2c_identity_framework bring changed code to new repository                                          L
 6. b2c_identity_governance all APIS to be re created in new version
-7. simplified login sms opt UI and code
-8. simplified wordpress migration
+7. simplified login sms opt UI and code                                                                 L
+8. simplified wordpress migration                                                                       L
 
 1. reseller authentication flow
 2. APIS
-    a. activation
-    b. forgot password
-    c. 
+    a. new activation link retrieval                        F
+    b. validate activation code                             L
+    c. password recovery no change required
+    d. user search  not required for reseller
+    e. validate/send email not required for reseller
+    f. check password and update password with UID          L
+    g. User creation api wrapper                            F
+
+1. User data migration                                      F
+2. Service provider creation                                F
+3. General setup for tenant domain                          F
