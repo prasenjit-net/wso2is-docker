@@ -1,1 +1,76 @@
-<mxfile host="www.draw.io" modified="2020-01-20T12:21:00.026Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="bTDL4QXr3hPaWW66MO4g" version="12.5.5" type="github"><diagram id="Tn1zcbuLuo-uZEDJQAVc" name="Page-1">jZJNT8MwDIZ/TY6TmhSV7koZcGEHKjFxQlFjmqC0KVlKW349KXX6oWkSpziPHcd+bRJnVf9oeSOfjQBNWCR6Et8TxihNE3+MZJhIktAJlFYJDFpArn4AYYS0VQLOm0BnjHaq2cLC1DUUbsO4tabbhn0Yvf214SVcgLzg+pKelHByoim7XfgTqFKGn2mynzwVD8HYyVlyYboVig8kzqwxbrKqPgM9ihd0md49XPHOhVmo3X8efH2+ibrfvTbyJWPHY/VO96cdZvnmusWGsVg3BAWsaWsBY5KIxHedVA7yhhejt/Mz90y6Svsb9SamA+ugv1onnbv3awOmAmcHHxIeBMFwY1iE927R/yZFJlfaswA5zryccy+yeAOVCddlAn++1R7Hh18=</diagram></mxfile>
+<mxfile host="www.draw.io" modified="2020-01-20T12:36:19.702Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="4rqqjVA0Odmg8CJcaZcf" version="12.5.5" type="github">
+  <diagram id="Tn1zcbuLuo-uZEDJQAVc" name="Page-1">
+    <mxGraphModel dx="1186" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="qjYdnx-VphRC2NNm_19W-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="200" width="310" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--1" value="4 Node VM Cluster" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="210" width="120" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--2" value="Swarm Manager" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="140" y="250" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--5" value="&lt;span style=&quot;white-space: normal&quot;&gt;Swarm Manager&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="140" y="360" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--6" value="&lt;span style=&quot;white-space: normal&quot;&gt;Swarm Manager&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="280" y="250" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--7" value="&lt;span style=&quot;white-space: normal&quot;&gt;Swarm Worker&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--11" value="Multi Host Load Balancer" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="130" width="310" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="TEhKgZgGfc742X1Ef4y--11" target="TEhKgZgGfc742X1Ef4y--2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="650" as="sourcePoint"/>
+            <mxPoint x="170" y="600" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="275" y="190"/>
+              <mxPoint x="110" y="190"/>
+              <mxPoint x="110" y="295"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--13" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="TEhKgZgGfc742X1Ef4y--11" target="TEhKgZgGfc742X1Ef4y--6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="650" as="sourcePoint"/>
+            <mxPoint x="150" y="600" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="353" y="190"/>
+              <mxPoint x="440" y="190"/>
+              <mxPoint x="440" y="295"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--14" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="TEhKgZgGfc742X1Ef4y--11" target="TEhKgZgGfc742X1Ef4y--5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="650" as="sourcePoint"/>
+            <mxPoint x="150" y="600" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="198" y="180"/>
+              <mxPoint x="100" y="180"/>
+              <mxPoint x="100" y="405"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--15" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="215" y="10" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--16" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.55;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="TEhKgZgGfc742X1Ef4y--15" target="TEhKgZgGfc742X1Ef4y--11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="80" as="sourcePoint"/>
+            <mxPoint x="140" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TEhKgZgGfc742X1Ef4y--18" value="MySQL DB Cluster" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="190" width="150" height="180" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
