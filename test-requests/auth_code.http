@@ -1,0 +1,8 @@
+@baseurl=https://localhost:443
+@client_id = Jp1GdkPACkzRAly8e1tg8U1wl5Aa
+@client_recret = IOY5qpCFvtej_ZjaNym90Skozpca
+@username = john
+@password = Password12!
+
+# @name auth_Code
+GET {{baseurl}}/oauth2/authorize?response_type=code&redirect_uri=http://localhost:4200/callback&client_id={{client_id}}

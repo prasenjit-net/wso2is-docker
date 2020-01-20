@@ -1,0 +1,5 @@
+@bearertoken = f8142eac-47e0-3057-a50b-c8a61434500a
+@baseurl=https://localhost:443
+
+GET {{baseurl}}/oauth2/userinfo
+Authorization: Bearer {{bearertoken}}

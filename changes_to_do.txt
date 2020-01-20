@@ -1,0 +1,16 @@
+0. Create repository and import base code for all customized code
+0.1 Postman collection for Reseller
+1. Login screen war project
+2. UM_USER_CONSUMER will stay as backup, but we will try to migrate first and check required time
+3. Custom use store LDAP will come
+4. In case point 2 fall back JDBC user store will come too
+5. b2c_identity_framework bring changed code to new repository		*
+6. b2c_identity_governance all APIS to be re created in new version
+7. simplified login sms opt UI and code
+8. simplified wordpress migration
+
+1. reseller authentication flow
+2. APIS
+    a. activation
+    b. forgot password
+    c. 
