@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "17dd3d73-201f-4b1b-8a7a-dcb7a4b6a2ec",
+		"name": "user-registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"john3\",\n        \"realm\": \"PRIMARY\",\n        \"password\": \"Password12!\",\n        \"claims\": [\n            {\n                \"uri\": \"http://wso2.org/claims/givenname\",\n                \"value\": \"John\"\n            },\n            {\n                \"uri\": \"http://wso2.org/claims/emailaddress\",\n                \"value\": \"john.anderson@gmail.com\"\n            },\n            {\n                \"uri\": \"http://wso2.org/claims/lastname\",\n                \"value\": \"Anderson\"\n            },\n            {\n                \"uri\": \"http://wso2.org/claims/mobile\",\n                \"value\": \"+947721584558\"\n            },\n            {\n                \"uri\": \"http://wso2.org/claims/tmid\",\n                \"value\": \"tmid12\"\n            }\n        ]\n    },\n    \"properties\": []\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/user/v1.0/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"user",
+						"v1.0",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate-code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"1a672cb3-9862-4b77-88cf-8b2eb144512b\",\n    \"properties\": []\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/user/v1.0/validate-code",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"user",
+						"v1.0",
+						"validate-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-username",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"realm\": \"PRIMARY\",\n    \"existingUsername\": \"john\",\n    \"newUsername\": \"john3\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/user/v1.0/update-username",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"user",
+						"v1.0",
+						"update-username"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate-username",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"properties\": []\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/user/v1.0/validate-username",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"user",
+						"v1.0",
+						"validate-username"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recover-password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1b2ca9b5-1e01-36cd-8d52-9d9f8cd01054",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"john\",\n        \"realm\": \"PRIMARY\"\n    },\n    \"properties\": []\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/t/prasenjit.net/api/identity/recovery/v0.9/recover-password?type=email&notify=true",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"t",
+						"prasenjit.net",
+						"api",
+						"identity",
+						"recovery",
+						"v0.9",
+						"recover-password"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "email"
+						},
+						{
+							"key": "notify",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "security-question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1b2ca9b5-1e01-36cd-8d52-9d9f8cd01054",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:443/t/prasenjit.net/api/identity/recovery/v0.9/security-question?username=prasenjit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"t",
+						"prasenjit.net",
+						"api",
+						"identity",
+						"recovery",
+						"v0.9",
+						"security-question"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "prasenjit"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

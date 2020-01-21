@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "52a89767-c029-4fd8-87a5-95adc548983a",
+		"name": "setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register_client_get",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "7c709c5f-7a37-3b8f-83c7-08782ab6208d",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:443/api/identity/oauth2/dcr/v1.1/register/Jp1GdkPACkzRAly8e1tg8U1wl5Aa",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"oauth2",
+						"dcr",
+						"v1.1",
+						"register",
+						"Jp1GdkPACkzRAly8e1tg8U1wl5Aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_client",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/oauth2/dcr/v1.1/register?client_id=6OxIIrmGQzWNr4GSk0DfpyfZ_uUa",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"oauth2",
+						"dcr",
+						"v1.1",
+						"register"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "6OxIIrmGQzWNr4GSk0DfpyfZ_uUa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_roles",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<ser:getRoleNames xmlns:ser=\"http://service.ws.um.carbon.wso2.org\"/>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<ser:getUserId xmlns:ser=\"http://service.ws.um.carbon.wso2.org\">\n    <ser:username>john</ser:username>\n</ser:getUserId>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_application",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:getApplication xmlns:xsd=\"http://org.apache.axis2/xsd\">\n    <xsd:applicationName>sp1</xsd:applicationName>\n</xsd:getApplication>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export_application",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:exportApplication xmlns:xsd=\"http://org.apache.axis2/xsd\">\n    <xsd:applicationName>sp1</xsd:applicationName>\n    <xsd:exportSecrets>true</xsd:exportSecrets>\n</xsd:exportApplication>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "import_application",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:importApplication xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://model.common.application.identity.carbon.wso2.org/xsd\">\n    <xsd:spFileContent>\n        <xsd1:content>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?>&lt;ServiceProvider>\n  &lt;ApplicationName>sp1&lt;/ApplicationName>\n  &lt;Description/>\n  &lt;InboundAuthenticationConfig>\n    &lt;InboundAuthenticationRequestConfigs>\n      &lt;InboundAuthenticationRequestConfig>\n        &lt;InboundAuthKey>sp1&lt;/InboundAuthKey>\n        &lt;InboundAuthType>passivests&lt;/InboundAuthType>\n        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>\n        &lt;Properties/>\n      &lt;/InboundAuthenticationRequestConfig>\n      &lt;InboundAuthenticationRequestConfig>\n        &lt;InboundAuthKey>Jp1GdkPACkzRAly8e1tg8U1wl5Aa&lt;/InboundAuthKey>\n        &lt;InboundAuthType>oauth2&lt;/InboundAuthType>\n        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>\n        &lt;inboundConfiguration>&lt;![CDATA[&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n&lt;oAuthAppDO>\n    &lt;oauthConsumerKey>Jp1GdkPACkzRAly8e1tg8U1wl5Aa&lt;/oauthConsumerKey>\n    &lt;oauthConsumerSecret>IOY5qpCFvtej_ZjaNym90Skozpca&lt;/oauthConsumerSecret>\n    &lt;applicationName>sp1&lt;/applicationName>\n    &lt;callbackUrl>http://localhost:4200/callback&lt;/callbackUrl>\n    &lt;oauthVersion>OAuth-2.0&lt;/oauthVersion>\n    &lt;grantTypes>refresh_token urn:ietf:params:oauth:grant-type:saml2-bearer implicit password client_credentials iwa:ntlm authorization_code urn:ietf:params:oauth:grant-type:uma-ticket urn:ietf:params:oauth:grant-type:jwt-bearer &lt;/grantTypes>\n    &lt;scopeValidators/>\n    &lt;pkceSupportPlain>true&lt;/pkceSupportPlain>\n    &lt;pkceMandatory>false&lt;/pkceMandatory>\n    &lt;userAccessTokenExpiryTime>600&lt;/userAccessTokenExpiryTime>\n    &lt;applicationAccessTokenExpiryTime>3600&lt;/applicationAccessTokenExpiryTime>\n    &lt;refreshTokenExpiryTime>8460&lt;/refreshTokenExpiryTime>\n    &lt;idTokenExpiryTime>3600&lt;/idTokenExpiryTime>\n    &lt;audiences/>\n    &lt;bypassClientCredentials>false&lt;/bypassClientCredentials>\n    &lt;renewRefreshTokenEnabled>true&lt;/renewRefreshTokenEnabled>\n    &lt;requestObjectSignatureValidationEnabled>false&lt;/requestObjectSignatureValidationEnabled>\n    &lt;idTokenEncryptionEnabled>false&lt;/idTokenEncryptionEnabled>\n    &lt;idTokenEncryptionAlgorithm>null&lt;/idTokenEncryptionAlgorithm>\n    &lt;idTokenEncryptionMethod>null&lt;/idTokenEncryptionMethod>\n    &lt;tokenType>Default&lt;/tokenType>\n&lt;/oAuthAppDO>\n]]&gt;&lt;/inboundConfiguration>\n        &lt;Properties/>\n      &lt;/InboundAuthenticationRequestConfig>\n      &lt;InboundAuthenticationRequestConfig>\n        &lt;InboundAuthKey>sp1&lt;/InboundAuthKey>\n        &lt;InboundAuthType>openid&lt;/InboundAuthType>\n        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>\n        &lt;Properties/>\n      &lt;/InboundAuthenticationRequestConfig>\n    &lt;/InboundAuthenticationRequestConfigs>\n  &lt;/InboundAuthenticationConfig>\n  &lt;LocalAndOutBoundAuthenticationConfig>\n    &lt;AuthenticationSteps/>\n    &lt;AuthenticationType>default&lt;/AuthenticationType>\n    &lt;alwaysSendBackAuthenticatedListOfIdPs>false&lt;/alwaysSendBackAuthenticatedListOfIdPs>\n    &lt;subjectClaimUri>http://wso2.org/claims/username&lt;/subjectClaimUri>\n    &lt;UseTenantDomainInUsername>false&lt;/UseTenantDomainInUsername>\n    &lt;UseUserstoreDomainInRoles>true&lt;/UseUserstoreDomainInRoles>\n    &lt;UseUserstoreDomainInUsername>false&lt;/UseUserstoreDomainInUsername>\n    &lt;EnableAuthorization>false&lt;/EnableAuthorization>\n  &lt;/LocalAndOutBoundAuthenticationConfig>\n  &lt;RequestPathAuthenticatorConfigs/>\n  &lt;InboundProvisioningConfig>\n    &lt;ProvisioningUserStore/>\n    &lt;IsProvisioningEnabled>false&lt;/IsProvisioningEnabled>\n    &lt;IsDumbModeEnabled>false&lt;/IsDumbModeEnabled>\n  &lt;/InboundProvisioningConfig>\n  &lt;OutboundProvisioningConfig>\n    &lt;ProvisioningIdentityProviders/>\n  &lt;/OutboundProvisioningConfig>\n  &lt;ClaimConfig>\n    &lt;RoleClaimURI/>\n    &lt;LocalClaimDialect>true&lt;/LocalClaimDialect>\n    &lt;IdpClaim/>\n    &lt;ClaimMappings>\n      &lt;ClaimMapping>\n        &lt;LocalClaim>\n          &lt;ClaimUri>http://wso2.org/claims/tmid&lt;/ClaimUri>\n          &lt;claimId>0&lt;/claimId>\n        &lt;/LocalClaim>\n        &lt;RemoteClaim>\n          &lt;ClaimUri>http://wso2.org/claims/tmid&lt;/ClaimUri>\n          &lt;claimId>0&lt;/claimId>\n        &lt;/RemoteClaim>\n        &lt;RequestClaim>true&lt;/RequestClaim>\n        &lt;MandatoryClaim>true&lt;/MandatoryClaim>\n      &lt;/ClaimMapping>\n    &lt;/ClaimMappings>\n    &lt;AlwaysSendMappedLocalSubjectId>false&lt;/AlwaysSendMappedLocalSubjectId>\n    &lt;SPClaimDialects/>\n  &lt;/ClaimConfig>\n  &lt;PermissionAndRoleConfig>\n    &lt;Permissions/>\n    &lt;RoleMappings/>\n    &lt;IdpRoles/>\n  &lt;/PermissionAndRoleConfig>\n  &lt;IsSaaSApp>false&lt;/IsSaaSApp>\n&lt;/ServiceProvider></xsd1:content>\n</xsd:spFileContent>\n</xsd:importApplication>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_local_claim",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:addLocalClaim xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd\">\n    <xsd:localClaim>\n        <xsd1:attributeMappings>\n            <xsd1:attributeName>tmid1</xsd1:attributeName>\n            <xsd1:userStoreDomain>PRIMARY</xsd1:userStoreDomain>\n        </xsd1:attributeMappings>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Description</xsd1:propertyName>\n            <xsd1:propertyValue>T_Mobile Application ID</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Required</xsd1:propertyName>\n            <xsd1:propertyValue>false</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayName</xsd1:propertyName>\n            <xsd1:propertyValue>T_Mobile ID</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <!--Optional:-->\n        <xsd1:localClaimURI>http://wso2.org/claims/tmid1</xsd1:localClaimURI>\n    </xsd:localClaim>\n</xsd:addLocalClaim>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_claims",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<ser:getUserClaimValues xmlns:ser=\"http://service.ws.um.carbon.wso2.org\">\n    <ser:userName>admin</ser:userName>\n    <ser:profileName>default</ser:profileName>\n</ser:getUserClaimValues>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_claims_53_uat",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admincs",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admincs@consumer.tele2.nl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<ser:getUserClaimValues xmlns:ser=\"http://service.ws.um.carbon.wso2.org\">\n    <ser:userName>tablet-alkmaar@tele2.com</ser:userName>\n    <ser:profileName>default</ser:profileName>\n</ser:getUserClaimValues>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nluu-wso2is21:9543/services/RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"nluu-wso2is21"
+					],
+					"port": "9543",
+					"path": [
+						"services",
+						"RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_claims",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:443/api/identity/user/v1.0/pi-info/{{uid_base64_url}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"user",
+						"v1.0",
+						"pi-info",
+						"{{uid_base64_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

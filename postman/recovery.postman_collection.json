@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "4bcb2a48-c594-4f2b-ae2e-410ad357b705",
+		"name": "recovery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "set-password",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"8f46ca27-3a97-4969-b5e9-7943634d03a3\",\n    \"password\": \"Password1!\",\n    \"properties\": []\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/recovery/v0.9/set-password",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"recovery",
+						"v0.9",
+						"set-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recover-password?type=email&notify=true",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"john\",\n        \"realm\": \"PRIMARY\"\n    },\n    \"properties\": []\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/recovery/v0.9/recover-password?type=email&notify=false",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"recovery",
+						"v0.9",
+						"recover-password"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "email"
+						},
+						{
+							"key": "notify",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resend-code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"john1\",\n        \"realm\": \"PRIMARY\"\n    },\n    \"properties\": [\n        {\n            \"key\": \"RecoveryScenario\",\n            \"value\": \"SELF_SIGN_UP\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:443/api/identity/user/v1.0/resend-code",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"user",
+						"v1.0",
+						"resend-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "me_get",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:443/api/identity/user/v1.0/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"identity",
+						"user",
+						"v1.0",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
