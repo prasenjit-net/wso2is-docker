@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "0ab1884f-eb61-41b2-a9aa-1a7b514fbf33",
+		"name": "init_setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_local_claim_shop_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d788614a-f5ba-49cb-afb8-9f2342bc39cd",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:addLocalClaim xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd\">\n    <xsd:localClaim>\n        <xsd1:attributeMappings>\n            <xsd1:attributeName>shopid</xsd1:attributeName>\n            <xsd1:userStoreDomain>PRIMARY</xsd1:userStoreDomain>\n        </xsd1:attributeMappings>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Description</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Shop ID</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Required</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayName</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Shop ID</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <!--Optional:-->\n        <xsd1:localClaimURI>http://wso2.org/claims/shopid</xsd1:localClaimURI>\n    </xsd:localClaim>\n</xsd:addLocalClaim>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{hostname}}/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"services",
+						"ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_local_claim_customer_type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "04c9730b-5573-443e-853c-b80f39b79cac",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:addLocalClaim xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd\">\n    <xsd:localClaim>\n        <xsd1:attributeMappings>\n            <xsd1:attributeName>customertype</xsd1:attributeName>\n            <xsd1:userStoreDomain>PRIMARY</xsd1:userStoreDomain>\n        </xsd1:attributeMappings>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Description</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Customer Type</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Required</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayName</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Customer Type</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <!--Optional:-->\n        <xsd1:localClaimURI>http://wso2.org/claims/customer_type</xsd1:localClaimURI>\n    </xsd:localClaim>\n</xsd:addLocalClaim>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{hostname}}/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"services",
+						"ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_local_claim_user_role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5030459d-bcce-48f3-a54c-b568a2c76317",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:addLocalClaim xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd\">\n    <xsd:localClaim>\n        <xsd1:attributeMappings>\n            <xsd1:attributeName>userrole</xsd1:attributeName>\n            <xsd1:userStoreDomain>PRIMARY</xsd1:userStoreDomain>\n        </xsd1:attributeMappings>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Description</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Role</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Required</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayName</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Role</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <!--Optional:-->\n        <xsd1:localClaimURI>http://wso2.org/claims/user_role</xsd1:localClaimURI>\n    </xsd:localClaim>\n</xsd:addLocalClaim>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{hostname}}/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"services",
+						"ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_external_claim_shop_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2b6b613-a30d-4b1b-b342-a47639e9ba43",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:addExternalClaim xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd\">\n    <xsd:externalClaim>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Description</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Shop ID</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayOrder</xsd1:propertyName>\n            <xsd1:propertyValue>1</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>MappedLocalClaim</xsd1:propertyName>\n            <xsd1:propertyValue>http://wso2.org/claims/shopid</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayName</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Shop ID</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:externalClaimDialectURI>http://wso2.org/oidc/claim</xsd1:externalClaimDialectURI>\n        <xsd1:externalClaimURI>shopid</xsd1:externalClaimURI>\n        <xsd1:mappedLocalClaimURI>http://wso2.org/claims/shopid</xsd1:mappedLocalClaimURI>\n    </xsd:externalClaim>\n</xsd:addExternalClaim>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_external_claim_user_role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3f2b15d8-59d6-4ca2-ab78-838511cdbd1c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:addExternalClaim xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd\">\n    <xsd:externalClaim>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Description</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller User Role</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayOrder</xsd1:propertyName>\n            <xsd1:propertyValue>1</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>MappedLocalClaim</xsd1:propertyName>\n            <xsd1:propertyValue>http://wso2.org/claims/user_role</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayName</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Shop ID</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:externalClaimDialectURI>http://wso2.org/oidc/claim</xsd1:externalClaimDialectURI>\n        <xsd1:externalClaimURI>user_role</xsd1:externalClaimURI>\n        <xsd1:mappedLocalClaimURI>http://wso2.org/claims/user_role</xsd1:mappedLocalClaimURI>\n    </xsd:externalClaim>\n</xsd:addExternalClaim>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_external_claim_customer_type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "acab8b96-ffd3-4b30-84a8-6d75ce2d2ede",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:addExternalClaim xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd\">\n    <xsd:externalClaim>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>Description</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Customer Type</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayOrder</xsd1:propertyName>\n            <xsd1:propertyValue>1</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>MappedLocalClaim</xsd1:propertyName>\n            <xsd1:propertyValue>http://wso2.org/claims/customer_type</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>\n            <xsd1:propertyValue>true</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:claimProperties>\n            <xsd1:propertyName>DisplayName</xsd1:propertyName>\n            <xsd1:propertyValue>Tele2 Reseller Customer Type</xsd1:propertyValue>\n        </xsd1:claimProperties>\n        <xsd1:externalClaimDialectURI>http://wso2.org/oidc/claim</xsd1:externalClaimDialectURI>\n        <xsd1:externalClaimURI>customer_type</xsd1:externalClaimURI>\n        <xsd1:mappedLocalClaimURI>http://wso2.org/claims/customer_type</xsd1:mappedLocalClaimURI>\n    </xsd:externalClaim>\n</xsd:addExternalClaim>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "import_reseller_sp",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:importApplication xmlns:xsd=\"http://org.apache.axis2/xsd\" xmlns:xsd1=\"http://model.common.application.identity.carbon.wso2.org/xsd\">\n    <xsd:spFileContent>\n        <xsd1:content>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?>&lt;ServiceProvider>\n  &lt;ApplicationName>sp1&lt;/ApplicationName>\n  &lt;Description/>\n  &lt;InboundAuthenticationConfig>\n    &lt;InboundAuthenticationRequestConfigs>\n      &lt;InboundAuthenticationRequestConfig>\n        &lt;InboundAuthKey>sp1&lt;/InboundAuthKey>\n        &lt;InboundAuthType>passivests&lt;/InboundAuthType>\n        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>\n        &lt;Properties/>\n      &lt;/InboundAuthenticationRequestConfig>\n      &lt;InboundAuthenticationRequestConfig>\n        &lt;InboundAuthKey>Jp1GdkPACkzRAly8e1tg8U1wl5Aa&lt;/InboundAuthKey>\n        &lt;InboundAuthType>oauth2&lt;/InboundAuthType>\n        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>\n        &lt;inboundConfiguration>&lt;![CDATA[&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n&lt;oAuthAppDO>\n    &lt;oauthConsumerKey>Jp1GdkPACkzRAly8e1tg8U1wl5Aa&lt;/oauthConsumerKey>\n    &lt;oauthConsumerSecret>IOY5qpCFvtej_ZjaNym90Skozpca&lt;/oauthConsumerSecret>\n    &lt;applicationName>sp1&lt;/applicationName>\n    &lt;callbackUrl>http://localhost:4200/callback&lt;/callbackUrl>\n    &lt;oauthVersion>OAuth-2.0&lt;/oauthVersion>\n    &lt;grantTypes>refresh_token urn:ietf:params:oauth:grant-type:saml2-bearer implicit password client_credentials iwa:ntlm authorization_code urn:ietf:params:oauth:grant-type:uma-ticket urn:ietf:params:oauth:grant-type:jwt-bearer &lt;/grantTypes>\n    &lt;scopeValidators/>\n    &lt;pkceSupportPlain>true&lt;/pkceSupportPlain>\n    &lt;pkceMandatory>false&lt;/pkceMandatory>\n    &lt;userAccessTokenExpiryTime>600&lt;/userAccessTokenExpiryTime>\n    &lt;applicationAccessTokenExpiryTime>3600&lt;/applicationAccessTokenExpiryTime>\n    &lt;refreshTokenExpiryTime>8460&lt;/refreshTokenExpiryTime>\n    &lt;idTokenExpiryTime>3600&lt;/idTokenExpiryTime>\n    &lt;audiences/>\n    &lt;bypassClientCredentials>false&lt;/bypassClientCredentials>\n    &lt;renewRefreshTokenEnabled>true&lt;/renewRefreshTokenEnabled>\n    &lt;requestObjectSignatureValidationEnabled>false&lt;/requestObjectSignatureValidationEnabled>\n    &lt;idTokenEncryptionEnabled>false&lt;/idTokenEncryptionEnabled>\n    &lt;idTokenEncryptionAlgorithm>null&lt;/idTokenEncryptionAlgorithm>\n    &lt;idTokenEncryptionMethod>null&lt;/idTokenEncryptionMethod>\n    &lt;tokenType>Default&lt;/tokenType>\n&lt;/oAuthAppDO>\n]]&gt;&lt;/inboundConfiguration>\n        &lt;Properties/>\n      &lt;/InboundAuthenticationRequestConfig>\n      &lt;InboundAuthenticationRequestConfig>\n        &lt;InboundAuthKey>sp1&lt;/InboundAuthKey>\n        &lt;InboundAuthType>openid&lt;/InboundAuthType>\n        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>\n        &lt;Properties/>\n      &lt;/InboundAuthenticationRequestConfig>\n    &lt;/InboundAuthenticationRequestConfigs>\n  &lt;/InboundAuthenticationConfig>\n  &lt;LocalAndOutBoundAuthenticationConfig>\n    &lt;AuthenticationSteps/>\n    &lt;AuthenticationType>default&lt;/AuthenticationType>\n    &lt;alwaysSendBackAuthenticatedListOfIdPs>false&lt;/alwaysSendBackAuthenticatedListOfIdPs>\n    &lt;subjectClaimUri>http://wso2.org/claims/username&lt;/subjectClaimUri>\n    &lt;UseTenantDomainInUsername>false&lt;/UseTenantDomainInUsername>\n    &lt;UseUserstoreDomainInRoles>true&lt;/UseUserstoreDomainInRoles>\n    &lt;UseUserstoreDomainInUsername>false&lt;/UseUserstoreDomainInUsername>\n    &lt;EnableAuthorization>false&lt;/EnableAuthorization>\n  &lt;/LocalAndOutBoundAuthenticationConfig>\n  &lt;RequestPathAuthenticatorConfigs/>\n  &lt;InboundProvisioningConfig>\n    &lt;ProvisioningUserStore/>\n    &lt;IsProvisioningEnabled>false&lt;/IsProvisioningEnabled>\n    &lt;IsDumbModeEnabled>false&lt;/IsDumbModeEnabled>\n  &lt;/InboundProvisioningConfig>\n  &lt;OutboundProvisioningConfig>\n    &lt;ProvisioningIdentityProviders/>\n  &lt;/OutboundProvisioningConfig>\n  &lt;ClaimConfig>\n    &lt;RoleClaimURI/>\n    &lt;LocalClaimDialect>true&lt;/LocalClaimDialect>\n    &lt;IdpClaim/>\n    &lt;ClaimMappings>\n      &lt;ClaimMapping>\n        &lt;LocalClaim>\n          &lt;ClaimUri>http://wso2.org/claims/tmid&lt;/ClaimUri>\n          &lt;claimId>0&lt;/claimId>\n        &lt;/LocalClaim>\n        &lt;RemoteClaim>\n          &lt;ClaimUri>http://wso2.org/claims/tmid&lt;/ClaimUri>\n          &lt;claimId>0&lt;/claimId>\n        &lt;/RemoteClaim>\n        &lt;RequestClaim>true&lt;/RequestClaim>\n        &lt;MandatoryClaim>true&lt;/MandatoryClaim>\n      &lt;/ClaimMapping>\n    &lt;/ClaimMappings>\n    &lt;AlwaysSendMappedLocalSubjectId>false&lt;/AlwaysSendMappedLocalSubjectId>\n    &lt;SPClaimDialects/>\n  &lt;/ClaimConfig>\n  &lt;PermissionAndRoleConfig>\n    &lt;Permissions/>\n    &lt;RoleMappings/>\n    &lt;IdpRoles/>\n  &lt;/PermissionAndRoleConfig>\n  &lt;IsSaaSApp>false&lt;/IsSaaSApp>\n&lt;/ServiceProvider></xsd1:content>\n</xsd:spFileContent>\n</xsd:importApplication>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_claims_to_openid_scope",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{admin_password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{admin_user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<xsd:updateScope xmlns:xsd=\"http://org.apache.axis2/xsd\">\n    <!--Optional:-->\n    <xsd:scope>openid</xsd:scope>\n    <!--Zero or more repetitions:-->\n    <xsd:addClaims>shopid</xsd:addClaims>\n    <xsd:addClaims>customer_type</xsd:addClaims>\n    <xsd:addClaims>user_role</xsd:addClaims>\n</xsd:updateScope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsEndpoint/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"services",
+						"OAuthAdminService.OAuthAdminServiceHttpsEndpoint",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
