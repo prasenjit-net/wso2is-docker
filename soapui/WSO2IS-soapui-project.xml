@@ -2522,14 +2522,14 @@
          <ser:requirePasswordChange>?</ser:requirePasswordChange>
       </ser:addUser>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addUser"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0577e1b7-50e3-4c5e-8ee6-98f3b193569f" isOneWay="false" action="urn:addUserClaimValue" name="addUserClaimValue" bindingOperationName="addUserClaimValue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="69167c8b-d552-44f4-b83a-e188b2afa4ec" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.ws.um.carbon.wso2.org">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addUser"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0577e1b7-50e3-4c5e-8ee6-98f3b193569f" isOneWay="false" action="urn:addUserClaimValue" name="addUserClaimValue" bindingOperationName="addUserClaimValue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="69167c8b-d552-44f4-b83a-e188b2afa4ec" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/RemoteUserStoreManagerService.RemoteUserStoreManagerServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.ws.um.carbon.wso2.org">
    <soapenv:Header/>
    <soapenv:Body>
       <ser:addUserClaimValue>
          <!--Optional:-->
-         <ser:userName>?</ser:userName>
+         <ser:userName>admin</ser:userName>
          <!--Optional:-->
-         <ser:claimURI>?</ser:claimURI>
+         <ser:claimURI></ser:claimURI>
          <!--Optional:-->
          <ser:claimValue>?</ser:claimValue>
          <!--Optional:-->
@@ -16825,7 +16825,7 @@
          </xsd:externalClaim>
       </xsd:addExternalClaim>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addExternalClaim"/></con:call></con:operation><con:operation id="ca4e2895-0c15-450e-8538-ba2cf8f8d830" isOneWay="false" action="urn:addLocalClaim" name="addLocalClaim" bindingOperationName="addLocalClaim" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ad68189a-0aba-4bea-8e18-2a965a45f431" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addExternalClaim"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ca4e2895-0c15-450e-8538-ba2cf8f8d830" isOneWay="false" action="urn:addLocalClaim" name="addLocalClaim" bindingOperationName="addLocalClaim" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ad68189a-0aba-4bea-8e18-2a965a45f431" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd">
    <soapenv:Header/>
    <soapenv:Body>
       <xsd:addLocalClaim>
@@ -16855,15 +16855,15 @@
    <soapenv:Body>
       <xsd:getClaimDialects/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getClaimDialects"/></con:call></con:operation><con:operation id="982bd50e-137f-40ed-98bb-1388b4a97ee8" isOneWay="false" action="urn:getExternalClaims" name="getExternalClaims" bindingOperationName="getExternalClaims" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="daa142ea-d4d1-4bd7-821b-b1e681e933f4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getClaimDialects"/></con:call></con:operation><con:operation id="982bd50e-137f-40ed-98bb-1388b4a97ee8" isOneWay="false" action="urn:getExternalClaims" name="getExternalClaims" bindingOperationName="getExternalClaims" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="daa142ea-d4d1-4bd7-821b-b1e681e933f4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
    <soapenv:Header/>
    <soapenv:Body>
       <xsd:getExternalClaims>
          <!--Optional:-->
-         <xsd:externalClaimDialectURI>?</xsd:externalClaimDialectURI>
+         <xsd:externalClaimDialectURI>http://wso2.org/oidc/claim</xsd:externalClaimDialectURI>
       </xsd:getExternalClaims>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getExternalClaims"/></con:call></con:operation><con:operation id="d7ad64b7-117a-4683-af0d-e0ee1c69c57a" isOneWay="false" action="urn:getLocalClaims" name="getLocalClaims" bindingOperationName="getLocalClaims" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f76b5037-3945-4a16-9cd3-ca6eeac347fe" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getExternalClaims"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d7ad64b7-117a-4683-af0d-e0ee1c69c57a" isOneWay="false" action="urn:getLocalClaims" name="getLocalClaims" bindingOperationName="getLocalClaims" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f76b5037-3945-4a16-9cd3-ca6eeac347fe" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
    <soapenv:Header/>
    <soapenv:Body>
       <xsd:getLocalClaims/>
@@ -16960,4 +16960,2494 @@
          </xsd:localClaim>
       </xsd:updateLocalClaim>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateLocalClaim"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateLocalClaim"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="e6bfd7ee-cebc-4637-8e22-6e7a1f65b19d" wsaVersion="NONE" name="OAuthAdminServiceSoap12Binding" type="wsdl" bindingName="{http://oauth.identity.carbon.wso2.org}OAuthAdminServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="https://localhost/services/OAuthAdminService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="958a5904-edf5-4745-b168-06b26ee1f768" isOneWay="false" action="urn:addScope" name="addScope" bindingOperationName="addScope" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2d1f34e7-e271-436f-86c8-cd18b09f834a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:addScope>
+         <!--Optional:-->
+         <xsd:scope>rs</xsd:scope>
+         <!--Zero or more repetitions:-->
+         <xsd:claims>gender</xsd:claims>
+      </xsd:addScope>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addScope"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c170e4f0-608d-4f1c-9f83-d5d4d9d82956" isOneWay="false" action="urn:deleteScope" name="deleteScope" bindingOperationName="deleteScope" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e94b3627-be78-4951-ae7c-6a29488bbfd5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:deleteScope>
+         <!--Optional:-->
+         <xsd:scope>?</xsd:scope>
+      </xsd:deleteScope>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:deleteScope"/></con:call></con:operation><con:operation id="06c0ab07-6928-4c6e-b1fd-e1cea65c7bd0" isOneWay="false" action="urn:getAllOAuthApplicationData" name="getAllOAuthApplicationData" bindingOperationName="getAllOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7a716e1f-2932-405e-8ba0-d69c486f4f25" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getAllOAuthApplicationData/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllOAuthApplicationData"/></con:call></con:operation><con:operation id="fe95f8d4-32a7-42fd-a58a-059e7f30026a" isOneWay="false" action="urn:getAllowedGrantTypes" name="getAllowedGrantTypes" bindingOperationName="getAllowedGrantTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5426ee38-e0e8-4421-bba3-7a1424724886" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getAllowedGrantTypes/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllowedGrantTypes"/></con:call></con:operation><con:operation id="33e8f939-235d-46d2-bd32-bdc955b8acee" isOneWay="false" action="urn:getAllowedScopeValidators" name="getAllowedScopeValidators" bindingOperationName="getAllowedScopeValidators" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c86d29b5-a8e9-4141-81bb-38fd35a56fa8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getAllowedScopeValidators/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllowedScopeValidators"/></con:call></con:operation><con:operation id="14770c90-ad13-46a3-9efa-e7ac2214fd03" isOneWay="false" action="urn:getAppsAuthorizedByUser" name="getAppsAuthorizedByUser" bindingOperationName="getAppsAuthorizedByUser" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3256a11e-776e-4ab8-a435-89d656c2c7a5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getAppsAuthorizedByUser/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAppsAuthorizedByUser"/></con:call></con:operation><con:operation id="9de39cc4-99ce-4923-83b1-3f201cf3672c" isOneWay="false" action="urn:getAudiences" name="getAudiences" bindingOperationName="getAudiences" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="484e49f7-74ef-4bb2-858c-216af91ee219" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request>&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   &lt;soap:Header/>
+   &lt;soap:Body/>
+&lt;/soap:Envelope></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAudiences"/></con:call></con:operation><con:operation id="3703c0c3-bfab-4dd7-a82b-841fac6813dd" isOneWay="false" action="urn:getClaims" name="getClaims" bindingOperationName="getClaims" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e1ae40e4-72d1-4301-858a-637be274f886" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getClaims>
+         <!--Optional:-->
+         <xsd:scope>?</xsd:scope>
+      </xsd:getClaims>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getClaims"/></con:call></con:operation><con:operation id="29c8e3b4-efc4-4111-b4fb-89a6f5d06415" isOneWay="false" action="urn:getOAuthApplicationData" name="getOAuthApplicationData" bindingOperationName="getOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c7f3c3ee-0afa-4194-93d5-0792d6d683e7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:getOAuthApplicationData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getOAuthApplicationData"/></con:call></con:operation><con:operation id="a3b8dbfc-cdac-4c7b-8117-1865bd99f347" isOneWay="false" action="urn:getOAuthApplicationDataByAppName" name="getOAuthApplicationDataByAppName" bindingOperationName="getOAuthApplicationDataByAppName" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5100bca2-8af1-47ea-b5d6-c7c661f0b0ff" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getOAuthApplicationDataByAppName>
+         <!--Optional:-->
+         <xsd:appName>?</xsd:appName>
+      </xsd:getOAuthApplicationDataByAppName>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getOAuthApplicationDataByAppName"/></con:call></con:operation><con:operation id="57b75c93-ac8f-4424-a41c-4c935dbf3b2d" isOneWay="false" action="urn:getOauthApplicationState" name="getOauthApplicationState" bindingOperationName="getOauthApplicationState" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dec8f93c-43a1-46a8-b2b8-f8c330b9ff31" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getOauthApplicationState>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:getOauthApplicationState>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getOauthApplicationState"/></con:call></con:operation><con:operation id="117dfbbe-1263-4ba9-acc2-f9367cc44a79" isOneWay="false" action="urn:getScopeNames" name="getScopeNames" bindingOperationName="getScopeNames" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5358c3a9-8697-4c87-82c7-774f6c6c710d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getScopeNames/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getScopeNames"/></con:call></con:operation><con:operation id="dedd8d42-3a5c-43f1-8fd6-46a50d0c471b" isOneWay="false" action="urn:getScopes" name="getScopes" bindingOperationName="getScopes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a6a9698e-0cb3-40a8-9a95-85a2689d3b1e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getScopes/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getScopes"/></con:call></con:operation><con:operation id="77ddda1d-c37a-4ad7-b811-5849a74fcdee" isOneWay="false" action="urn:getSupportedIDTokenAlgorithms" name="getSupportedIDTokenAlgorithms" bindingOperationName="getSupportedIDTokenAlgorithms" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9dd52272-7919-4b16-bae8-4a97a5f9bf40" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getSupportedIDTokenAlgorithms/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getSupportedIDTokenAlgorithms"/></con:call></con:operation><con:operation id="cc6fb550-b15c-4188-b501-aa10eef59256" isOneWay="false" action="urn:getSupportedTokenTypes" name="getSupportedTokenTypes" bindingOperationName="getSupportedTokenTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="88b8bc64-cc92-4ac7-8c1e-7b1296df5df9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getSupportedTokenTypes/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getSupportedTokenTypes"/></con:call></con:operation><con:operation id="49bd4100-38ac-4802-8ce6-e94ffca545ee" isOneWay="false" action="urn:getTokenExpiryTimes" name="getTokenExpiryTimes" bindingOperationName="getTokenExpiryTimes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d249e45f-47a6-48ac-94fc-0e0382708223" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:getTokenExpiryTimes/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getTokenExpiryTimes"/></con:call></con:operation><con:operation id="07f5ddcd-bf00-4f2c-be1e-e12d13aa40cf" isOneWay="false" action="urn:isHashDisabled" name="isHashDisabled" bindingOperationName="isHashDisabled" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="16cbdd7a-c557-4a9d-be41-51beaf861ebb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:isHashDisabled/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isHashDisabled"/></con:call></con:operation><con:operation id="87e1a2e7-b769-4620-89d9-b6f5375f0ab3" isOneWay="false" action="urn:isPKCESupportEnabled" name="isPKCESupportEnabled" bindingOperationName="isPKCESupportEnabled" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="71705d6a-5258-4716-af00-e39571f13d02" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:isPKCESupportEnabled/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isPKCESupportEnabled"/></con:call></con:operation><con:operation id="a6940f7d-3de2-45c4-8497-3c911d226215" isOneWay="false" action="urn:isRefreshTokenRenewalEnabled" name="isRefreshTokenRenewalEnabled" bindingOperationName="isRefreshTokenRenewalEnabled" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d13d2d1f-6073-4324-a97e-cc6d29538bd7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:isRefreshTokenRenewalEnabled/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isRefreshTokenRenewalEnabled"/></con:call></con:operation><con:operation id="60fdef5e-006b-4bfb-a068-098909125fc6" isOneWay="false" action="urn:isScopeExist" name="isScopeExist" bindingOperationName="isScopeExist" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="14b53440-adb9-4737-97f1-d1176a6034e4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:isScopeExist>
+         <!--Optional:-->
+         <xsd:scope>?</xsd:scope>
+      </xsd:isScopeExist>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isScopeExist"/></con:call></con:operation><con:operation id="dcbfc0ec-f798-4933-b640-498ef364fc30" isOneWay="false" action="urn:registerAndRetrieveOAuthApplicationData" name="registerAndRetrieveOAuthApplicationData" bindingOperationName="registerAndRetrieveOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fa4a49a8-3810-4c78-96f0-5e5d290f55ce" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:registerAndRetrieveOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:application>
+            <!--Optional:-->
+            <xsd1:OAuthVersion>?</xsd1:OAuthVersion>
+            <!--Optional:-->
+            <xsd1:applicationAccessTokenExpiryTime>?</xsd1:applicationAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:applicationName>?</xsd1:applicationName>
+            <!--Zero or more repetitions:-->
+            <xsd1:audiences>?</xsd1:audiences>
+            <!--Optional:-->
+            <xsd1:backChannelLogoutUrl>?</xsd1:backChannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:bypassClientCredentials>?</xsd1:bypassClientCredentials>
+            <!--Optional:-->
+            <xsd1:callbackUrl>?</xsd1:callbackUrl>
+            <!--Optional:-->
+            <xsd1:frontchannelLogoutUrl>?</xsd1:frontchannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:grantTypes>?</xsd1:grantTypes>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionAlgorithm>?</xsd1:idTokenEncryptionAlgorithm>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionEnabled>?</xsd1:idTokenEncryptionEnabled>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionMethod>?</xsd1:idTokenEncryptionMethod>
+            <!--Optional:-->
+            <xsd1:idTokenExpiryTime>?</xsd1:idTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:oauthConsumerKey>?</xsd1:oauthConsumerKey>
+            <!--Optional:-->
+            <xsd1:oauthConsumerSecret>?</xsd1:oauthConsumerSecret>
+            <!--Optional:-->
+            <xsd1:pkceMandatory>?</xsd1:pkceMandatory>
+            <!--Optional:-->
+            <xsd1:pkceSupportPlain>?</xsd1:pkceSupportPlain>
+            <!--Optional:-->
+            <xsd1:refreshTokenExpiryTime>?</xsd1:refreshTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:renewRefreshTokenEnabled>?</xsd1:renewRefreshTokenEnabled>
+            <!--Optional:-->
+            <xsd1:requestObjectSignatureValidationEnabled>?</xsd1:requestObjectSignatureValidationEnabled>
+            <!--Zero or more repetitions:-->
+            <xsd1:scopeValidators>?</xsd1:scopeValidators>
+            <!--Optional:-->
+            <xsd1:state>?</xsd1:state>
+            <!--Optional:-->
+            <xsd1:tokenType>?</xsd1:tokenType>
+            <!--Optional:-->
+            <xsd1:userAccessTokenExpiryTime>?</xsd1:userAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:username>?</xsd1:username>
+         </xsd:application>
+      </xsd:registerAndRetrieveOAuthApplicationData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:registerAndRetrieveOAuthApplicationData"/></con:call></con:operation><con:operation id="6bc48658-afeb-4d85-a863-8b6b302d8279" isOneWay="false" action="urn:registerOAuthApplicationData" name="registerOAuthApplicationData" bindingOperationName="registerOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="299859b6-f7c8-4d27-abc9-d29c8a1234fc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:registerOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:application>
+            <!--Optional:-->
+            <xsd1:OAuthVersion>?</xsd1:OAuthVersion>
+            <!--Optional:-->
+            <xsd1:applicationAccessTokenExpiryTime>?</xsd1:applicationAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:applicationName>?</xsd1:applicationName>
+            <!--Zero or more repetitions:-->
+            <xsd1:audiences>?</xsd1:audiences>
+            <!--Optional:-->
+            <xsd1:backChannelLogoutUrl>?</xsd1:backChannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:bypassClientCredentials>?</xsd1:bypassClientCredentials>
+            <!--Optional:-->
+            <xsd1:callbackUrl>?</xsd1:callbackUrl>
+            <!--Optional:-->
+            <xsd1:frontchannelLogoutUrl>?</xsd1:frontchannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:grantTypes>?</xsd1:grantTypes>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionAlgorithm>?</xsd1:idTokenEncryptionAlgorithm>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionEnabled>?</xsd1:idTokenEncryptionEnabled>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionMethod>?</xsd1:idTokenEncryptionMethod>
+            <!--Optional:-->
+            <xsd1:idTokenExpiryTime>?</xsd1:idTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:oauthConsumerKey>?</xsd1:oauthConsumerKey>
+            <!--Optional:-->
+            <xsd1:oauthConsumerSecret>?</xsd1:oauthConsumerSecret>
+            <!--Optional:-->
+            <xsd1:pkceMandatory>?</xsd1:pkceMandatory>
+            <!--Optional:-->
+            <xsd1:pkceSupportPlain>?</xsd1:pkceSupportPlain>
+            <!--Optional:-->
+            <xsd1:refreshTokenExpiryTime>?</xsd1:refreshTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:renewRefreshTokenEnabled>?</xsd1:renewRefreshTokenEnabled>
+            <!--Optional:-->
+            <xsd1:requestObjectSignatureValidationEnabled>?</xsd1:requestObjectSignatureValidationEnabled>
+            <!--Zero or more repetitions:-->
+            <xsd1:scopeValidators>?</xsd1:scopeValidators>
+            <!--Optional:-->
+            <xsd1:state>?</xsd1:state>
+            <!--Optional:-->
+            <xsd1:tokenType>?</xsd1:tokenType>
+            <!--Optional:-->
+            <xsd1:userAccessTokenExpiryTime>?</xsd1:userAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:username>?</xsd1:username>
+         </xsd:application>
+      </xsd:registerOAuthApplicationData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:registerOAuthApplicationData"/></con:call></con:operation><con:operation id="cfc56add-052c-4bca-a326-ed34e82e0ae8" isOneWay="false" action="urn:registerOAuthConsumer" name="registerOAuthConsumer" bindingOperationName="registerOAuthConsumer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2d2940af-27e4-4605-9d28-ef660372060c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:registerOAuthConsumer/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:registerOAuthConsumer"/></con:call></con:operation><con:operation id="b2c41f35-c642-448d-8547-2b5586b527c0" isOneWay="false" action="urn:removeOAuthApplicationData" name="removeOAuthApplicationData" bindingOperationName="removeOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bed768a1-c850-4dd2-bf6e-c35b9f183cb9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:removeOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:removeOAuthApplicationData>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:removeOAuthApplicationData"/></con:call></con:operation><con:operation id="73aa1517-6856-4970-9a7a-0545c0c5d87b" isOneWay="false" action="urn:revokeAuthzForAppsByResoureOwner" name="revokeAuthzForAppsByResoureOwner" bindingOperationName="revokeAuthzForAppsByResoureOwner" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="76a7f011-6bef-479b-b012-8131a6bc7af5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:revokeAuthzForAppsByResoureOwner>
+         <!--Optional:-->
+         <xsd:revokeRequestDTO>
+            <!--Zero or more repetitions:-->
+            <xsd1:apps>?</xsd1:apps>
+            <!--Optional:-->
+            <xsd1:authzUser>?</xsd1:authzUser>
+            <!--Optional:-->
+            <xsd1:consumerKey>?</xsd1:consumerKey>
+            <!--Optional:-->
+            <xsd1:consumerSecret>?</xsd1:consumerSecret>
+         </xsd:revokeRequestDTO>
+      </xsd:revokeAuthzForAppsByResoureOwner>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:revokeAuthzForAppsByResoureOwner"/></con:call></con:operation><con:operation id="7c298d0c-411e-4034-9823-0f98f9dc0a84" isOneWay="false" action="urn:updateAndRetrieveOauthSecretKey" name="updateAndRetrieveOauthSecretKey" bindingOperationName="updateAndRetrieveOauthSecretKey" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="74b76fcd-c4a4-404a-89f4-ddb8ab415f94" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:updateAndRetrieveOauthSecretKey>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:updateAndRetrieveOauthSecretKey>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateAndRetrieveOauthSecretKey"/></con:call></con:operation><con:operation id="d54add5b-b29a-4535-92fc-aeb6f1c50f38" isOneWay="false" action="urn:updateApproveAlwaysForAppConsentByResourceOwner" name="updateApproveAlwaysForAppConsentByResourceOwner" bindingOperationName="updateApproveAlwaysForAppConsentByResourceOwner" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b8a28481-e077-4bc4-b333-b1c6ce9f5eea" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:updateApproveAlwaysForAppConsentByResourceOwner>
+         <!--Optional:-->
+         <xsd:appName>?</xsd:appName>
+         <!--Optional:-->
+         <xsd:state>?</xsd:state>
+      </xsd:updateApproveAlwaysForAppConsentByResourceOwner>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateApproveAlwaysForAppConsentByResourceOwner"/></con:call></con:operation><con:operation id="070c3296-e4fb-4b3f-8055-e93c9cec1154" isOneWay="false" action="urn:updateConsumerApplication" name="updateConsumerApplication" bindingOperationName="updateConsumerApplication" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d18d99a9-d2a8-4325-8394-a332fd5e679f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:updateConsumerApplication>
+         <!--Optional:-->
+         <xsd:consumerAppDTO>
+            <!--Optional:-->
+            <xsd1:OAuthVersion>?</xsd1:OAuthVersion>
+            <!--Optional:-->
+            <xsd1:applicationAccessTokenExpiryTime>?</xsd1:applicationAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:applicationName>?</xsd1:applicationName>
+            <!--Zero or more repetitions:-->
+            <xsd1:audiences>?</xsd1:audiences>
+            <!--Optional:-->
+            <xsd1:backChannelLogoutUrl>?</xsd1:backChannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:bypassClientCredentials>?</xsd1:bypassClientCredentials>
+            <!--Optional:-->
+            <xsd1:callbackUrl>?</xsd1:callbackUrl>
+            <!--Optional:-->
+            <xsd1:frontchannelLogoutUrl>?</xsd1:frontchannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:grantTypes>?</xsd1:grantTypes>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionAlgorithm>?</xsd1:idTokenEncryptionAlgorithm>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionEnabled>?</xsd1:idTokenEncryptionEnabled>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionMethod>?</xsd1:idTokenEncryptionMethod>
+            <!--Optional:-->
+            <xsd1:idTokenExpiryTime>?</xsd1:idTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:oauthConsumerKey>?</xsd1:oauthConsumerKey>
+            <!--Optional:-->
+            <xsd1:oauthConsumerSecret>?</xsd1:oauthConsumerSecret>
+            <!--Optional:-->
+            <xsd1:pkceMandatory>?</xsd1:pkceMandatory>
+            <!--Optional:-->
+            <xsd1:pkceSupportPlain>?</xsd1:pkceSupportPlain>
+            <!--Optional:-->
+            <xsd1:refreshTokenExpiryTime>?</xsd1:refreshTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:renewRefreshTokenEnabled>?</xsd1:renewRefreshTokenEnabled>
+            <!--Optional:-->
+            <xsd1:requestObjectSignatureValidationEnabled>?</xsd1:requestObjectSignatureValidationEnabled>
+            <!--Zero or more repetitions:-->
+            <xsd1:scopeValidators>?</xsd1:scopeValidators>
+            <!--Optional:-->
+            <xsd1:state>?</xsd1:state>
+            <!--Optional:-->
+            <xsd1:tokenType>?</xsd1:tokenType>
+            <!--Optional:-->
+            <xsd1:userAccessTokenExpiryTime>?</xsd1:userAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:username>?</xsd1:username>
+         </xsd:consumerAppDTO>
+      </xsd:updateConsumerApplication>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateConsumerApplication"/></con:call></con:operation><con:operation id="5f711416-b380-4525-9c41-7ed8565d6a10" isOneWay="false" action="urn:updateConsumerAppState" name="updateConsumerAppState" bindingOperationName="updateConsumerAppState" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b1117925-29d7-433f-9927-08d8b6a726e5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:updateConsumerAppState>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+         <!--Optional:-->
+         <xsd:newState>?</xsd:newState>
+      </xsd:updateConsumerAppState>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateConsumerAppState"/></con:call></con:operation><con:operation id="3c0170cc-349f-47cd-87f7-7867a72b524b" isOneWay="false" action="urn:updateOauthSecretKey" name="updateOauthSecretKey" bindingOperationName="updateOauthSecretKey" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4bddeab3-4938-40ca-85a0-b30b1366c548" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:updateOauthSecretKey>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:updateOauthSecretKey>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateOauthSecretKey"/></con:call></con:operation><con:operation id="78adc869-6953-4443-9c58-c6068e2475c1" isOneWay="false" action="urn:updateScope" name="updateScope" bindingOperationName="updateScope" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="22e455fb-2fda-4a86-a350-4ee6e8178131" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:updateScope>
+         <!--Optional:-->
+         <xsd:scope>?</xsd:scope>
+         <!--Zero or more repetitions:-->
+         <xsd:addClaims>?</xsd:addClaims>
+         <!--Zero or more repetitions:-->
+         <xsd:deleteClaims>?</xsd:deleteClaims>
+      </xsd:updateScope>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateScope"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="9e969e9f-541c-4200-befe-4f152d7540d1" wsaVersion="NONE" name="OAuthAdminServiceSoap11Binding" type="wsdl" bindingName="{http://oauth.identity.carbon.wso2.org}OAuthAdminServiceSoap11Binding" soapVersion="1_1" anonymous="optional" definition="https://localhost/services/OAuthAdminService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://localhost/services/OAuthAdminService?wsdl"><con:part><con:url>https://localhost/services/OAuthAdminService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://oauth.identity.carbon.wso2.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ax2399="http://base.identity.carbon.wso2.org/xsd" xmlns:ax2402="http://dto.oauth.identity.carbon.wso2.org/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://oauth.identity.carbon.wso2.org" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ax2398="http://oauth.identity.carbon.wso2.org/xsd">
+  <wsdl:documentation>OAuthAdminService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://org.apache.axis2/xsd" xmlns:ax2401="http://oauth.identity.carbon.wso2.org/xsd" xmlns:ax2403="http://dto.oauth.identity.carbon.wso2.org/xsd" xmlns:ns="http://org.apache.axis2/xsd">
+      <xs:import namespace="http://oauth.identity.carbon.wso2.org/xsd"/>
+      <xs:import namespace="http://dto.oauth.identity.carbon.wso2.org/xsd"/>
+      <xs:element name="OAuthAdminServiceIdentityOAuthAdminException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="IdentityOAuthAdminException" nillable="true" type="ax2401:IdentityOAuthAdminException"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registerOAuthConsumer">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registerOAuthConsumerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllOAuthApplicationData">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllOAuthApplicationDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOAuthApplicationData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="consumerKey" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOAuthApplicationDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOAuthApplicationDataByAppName">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="appName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOAuthApplicationDataByAppNameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registerOAuthApplicationData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="application" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registerAndRetrieveOAuthApplicationData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="application" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registerAndRetrieveOAuthApplicationDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateConsumerApplication">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="consumerAppDTO" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOauthApplicationState">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="consumerKey" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOauthApplicationStateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addScope">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="scope" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="claims" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteScope">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="scope" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getScopeNames">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getScopeNamesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateScope">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="scope" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="addClaims" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="deleteClaims" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isScopeExist">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="scope" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isScopeExistResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateConsumerAppState">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="consumerKey" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="newState" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateOauthSecretKey">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="consumerKey" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateAndRetrieveOauthSecretKey">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="consumerKey" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateAndRetrieveOauthSecretKeyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="removeOAuthApplicationData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="consumerKey" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAppsAuthorizedByUser">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAppsAuthorizedByUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax2402:OAuthConsumerAppDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="revokeAuthzForAppsByResoureOwner">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="revokeRequestDTO" nillable="true" type="ax2402:OAuthRevocationRequestDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="revokeAuthzForAppsByResoureOwnerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthRevocationResponseDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateApproveAlwaysForAppConsentByResourceOwner">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="appName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="state" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateApproveAlwaysForAppConsentByResourceOwnerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthRevocationResponseDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllowedGrantTypes">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllowedGrantTypesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllowedScopeValidators">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllowedScopeValidatorsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSupportedTokenTypes">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSupportedTokenTypesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isRefreshTokenRenewalEnabled">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isRefreshTokenRenewalEnabledResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isPKCESupportEnabled">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isPKCESupportEnabledResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTokenExpiryTimes">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTokenExpiryTimesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthTokenExpiryTimeDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSupportedIDTokenAlgorithms">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSupportedIDTokenAlgorithmsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2402:OAuthIDTokenAlgorithmDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isHashDisabled">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isHashDisabledResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClaims">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="scope" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClaimsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getScopes">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getScopesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax2402:ScopeDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://base.identity.carbon.wso2.org/xsd">
+      <xs:complexType name="IdentityException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://oauth.identity.carbon.wso2.org/xsd" xmlns:ax2400="http://base.identity.carbon.wso2.org/xsd">
+      <xs:import namespace="http://base.identity.carbon.wso2.org/xsd"/>
+      <xs:complexType name="IdentityOAuthAdminException">
+        <xs:complexContent>
+          <xs:extension base="ax2399:IdentityException">
+            <xs:sequence/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://dto.oauth.identity.carbon.wso2.org/xsd">
+      <xs:complexType name="OAuthConsumerAppDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OAuthVersion" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="applicationAccessTokenExpiryTime" type="xs:long"/>
+          <xs:element minOccurs="0" name="applicationName" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="audiences" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="backChannelLogoutUrl" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="bypassClientCredentials" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="callbackUrl" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="frontchannelLogoutUrl" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="grantTypes" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="idTokenEncryptionAlgorithm" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="idTokenEncryptionEnabled" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="idTokenEncryptionMethod" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="idTokenExpiryTime" type="xs:long"/>
+          <xs:element minOccurs="0" name="oauthConsumerKey" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="oauthConsumerSecret" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="pkceMandatory" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="pkceSupportPlain" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="refreshTokenExpiryTime" type="xs:long"/>
+          <xs:element minOccurs="0" name="renewRefreshTokenEnabled" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="requestObjectSignatureValidationEnabled" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="scopeValidators" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="state" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="tokenType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="userAccessTokenExpiryTime" type="xs:long"/>
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OAuthRevocationRequestDTO">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="apps" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="authzUser" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="consumerKey" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="consumerSecret" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OAuthRevocationResponseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="error" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="errorCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="errorMsg" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OAuthTokenExpiryTimeDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="applicationAccessTokenExpiryTime" type="xs:long"/>
+          <xs:element minOccurs="0" name="idTokenExpiryTime" type="xs:long"/>
+          <xs:element minOccurs="0" name="refreshTokenExpiryTime" type="xs:long"/>
+          <xs:element minOccurs="0" name="userAccessTokenExpiryTime" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OAuthIDTokenAlgorithmDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="defaultIdTokenEncryptionAlgorithm" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="defaultIdTokenEncryptionMethod" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="supportedIdTokenEncryptionAlgorithms" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="supportedIdTokenEncryptionMethods" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ScopeDTO">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="claim" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="updateApproveAlwaysForAppConsentByResourceOwnerRequest">
+    <wsdl:part name="parameters" element="ns1:updateApproveAlwaysForAppConsentByResourceOwner"/>
+  </wsdl:message>
+  <wsdl:message name="updateApproveAlwaysForAppConsentByResourceOwnerResponse">
+    <wsdl:part name="parameters" element="ns1:updateApproveAlwaysForAppConsentByResourceOwnerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="OAuthAdminServiceIdentityOAuthAdminException">
+    <wsdl:part name="parameters" element="ns1:OAuthAdminServiceIdentityOAuthAdminException"/>
+  </wsdl:message>
+  <wsdl:message name="updateOauthSecretKeyRequest">
+    <wsdl:part name="parameters" element="ns1:updateOauthSecretKey"/>
+  </wsdl:message>
+  <wsdl:message name="updateOauthSecretKeyResponse"/>
+  <wsdl:message name="getAllowedGrantTypesRequest">
+    <wsdl:part name="parameters" element="ns1:getAllowedGrantTypes"/>
+  </wsdl:message>
+  <wsdl:message name="getAllowedGrantTypesResponse">
+    <wsdl:part name="parameters" element="ns1:getAllowedGrantTypesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateAndRetrieveOauthSecretKeyRequest">
+    <wsdl:part name="parameters" element="ns1:updateAndRetrieveOauthSecretKey"/>
+  </wsdl:message>
+  <wsdl:message name="updateAndRetrieveOauthSecretKeyResponse">
+    <wsdl:part name="parameters" element="ns1:updateAndRetrieveOauthSecretKeyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="isHashDisabledRequest">
+    <wsdl:part name="parameters" element="ns1:isHashDisabled"/>
+  </wsdl:message>
+  <wsdl:message name="isHashDisabledResponse">
+    <wsdl:part name="parameters" element="ns1:isHashDisabledResponse"/>
+  </wsdl:message>
+  <wsdl:message name="registerOAuthApplicationDataRequest">
+    <wsdl:part name="parameters" element="ns1:registerOAuthApplicationData"/>
+  </wsdl:message>
+  <wsdl:message name="registerOAuthApplicationDataResponse"/>
+  <wsdl:message name="getClaimsRequest">
+    <wsdl:part name="parameters" element="ns1:getClaims"/>
+  </wsdl:message>
+  <wsdl:message name="getClaimsResponse">
+    <wsdl:part name="parameters" element="ns1:getClaimsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="removeOAuthApplicationDataRequest">
+    <wsdl:part name="parameters" element="ns1:removeOAuthApplicationData"/>
+  </wsdl:message>
+  <wsdl:message name="removeOAuthApplicationDataResponse"/>
+  <wsdl:message name="getOAuthApplicationDataRequest">
+    <wsdl:part name="parameters" element="ns1:getOAuthApplicationData"/>
+  </wsdl:message>
+  <wsdl:message name="getOAuthApplicationDataResponse">
+    <wsdl:part name="parameters" element="ns1:getOAuthApplicationDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getOauthApplicationStateRequest">
+    <wsdl:part name="parameters" element="ns1:getOauthApplicationState"/>
+  </wsdl:message>
+  <wsdl:message name="getOauthApplicationStateResponse">
+    <wsdl:part name="parameters" element="ns1:getOauthApplicationStateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="isPKCESupportEnabledRequest">
+    <wsdl:part name="parameters" element="ns1:isPKCESupportEnabled"/>
+  </wsdl:message>
+  <wsdl:message name="isPKCESupportEnabledResponse">
+    <wsdl:part name="parameters" element="ns1:isPKCESupportEnabledResponse"/>
+  </wsdl:message>
+  <wsdl:message name="isRefreshTokenRenewalEnabledRequest">
+    <wsdl:part name="parameters" element="ns1:isRefreshTokenRenewalEnabled"/>
+  </wsdl:message>
+  <wsdl:message name="isRefreshTokenRenewalEnabledResponse">
+    <wsdl:part name="parameters" element="ns1:isRefreshTokenRenewalEnabledResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getOAuthApplicationDataByAppNameRequest">
+    <wsdl:part name="parameters" element="ns1:getOAuthApplicationDataByAppName"/>
+  </wsdl:message>
+  <wsdl:message name="getOAuthApplicationDataByAppNameResponse">
+    <wsdl:part name="parameters" element="ns1:getOAuthApplicationDataByAppNameResponse"/>
+  </wsdl:message>
+  <wsdl:message name="addScopeRequest">
+    <wsdl:part name="parameters" element="ns1:addScope"/>
+  </wsdl:message>
+  <wsdl:message name="addScopeResponse"/>
+  <wsdl:message name="updateConsumerApplicationRequest">
+    <wsdl:part name="parameters" element="ns1:updateConsumerApplication"/>
+  </wsdl:message>
+  <wsdl:message name="updateConsumerApplicationResponse"/>
+  <wsdl:message name="registerOAuthConsumerRequest">
+    <wsdl:part name="parameters" element="ns1:registerOAuthConsumer"/>
+  </wsdl:message>
+  <wsdl:message name="registerOAuthConsumerResponse">
+    <wsdl:part name="parameters" element="ns1:registerOAuthConsumerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="registerAndRetrieveOAuthApplicationDataRequest">
+    <wsdl:part name="parameters" element="ns1:registerAndRetrieveOAuthApplicationData"/>
+  </wsdl:message>
+  <wsdl:message name="registerAndRetrieveOAuthApplicationDataResponse">
+    <wsdl:part name="parameters" element="ns1:registerAndRetrieveOAuthApplicationDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="isScopeExistRequest">
+    <wsdl:part name="parameters" element="ns1:isScopeExist"/>
+  </wsdl:message>
+  <wsdl:message name="isScopeExistResponse">
+    <wsdl:part name="parameters" element="ns1:isScopeExistResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateConsumerAppStateRequest">
+    <wsdl:part name="parameters" element="ns1:updateConsumerAppState"/>
+  </wsdl:message>
+  <wsdl:message name="updateConsumerAppStateResponse"/>
+  <wsdl:message name="getSupportedTokenTypesRequest">
+    <wsdl:part name="parameters" element="ns1:getSupportedTokenTypes"/>
+  </wsdl:message>
+  <wsdl:message name="getSupportedTokenTypesResponse">
+    <wsdl:part name="parameters" element="ns1:getSupportedTokenTypesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="deleteScopeRequest">
+    <wsdl:part name="parameters" element="ns1:deleteScope"/>
+  </wsdl:message>
+  <wsdl:message name="getAudiencesRequest"/>
+  <wsdl:message name="getAudiencesResponse"/>
+  <wsdl:message name="getAllowedScopeValidatorsRequest">
+    <wsdl:part name="parameters" element="ns1:getAllowedScopeValidators"/>
+  </wsdl:message>
+  <wsdl:message name="getAllowedScopeValidatorsResponse">
+    <wsdl:part name="parameters" element="ns1:getAllowedScopeValidatorsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAllOAuthApplicationDataRequest">
+    <wsdl:part name="parameters" element="ns1:getAllOAuthApplicationData"/>
+  </wsdl:message>
+  <wsdl:message name="getAllOAuthApplicationDataResponse">
+    <wsdl:part name="parameters" element="ns1:getAllOAuthApplicationDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAppsAuthorizedByUserRequest">
+    <wsdl:part name="parameters" element="ns1:getAppsAuthorizedByUser"/>
+  </wsdl:message>
+  <wsdl:message name="getAppsAuthorizedByUserResponse">
+    <wsdl:part name="parameters" element="ns1:getAppsAuthorizedByUserResponse"/>
+  </wsdl:message>
+  <wsdl:message name="updateScopeRequest">
+    <wsdl:part name="parameters" element="ns1:updateScope"/>
+  </wsdl:message>
+  <wsdl:message name="updateScopeResponse"/>
+  <wsdl:message name="getTokenExpiryTimesRequest">
+    <wsdl:part name="parameters" element="ns1:getTokenExpiryTimes"/>
+  </wsdl:message>
+  <wsdl:message name="getTokenExpiryTimesResponse">
+    <wsdl:part name="parameters" element="ns1:getTokenExpiryTimesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getScopeNamesRequest">
+    <wsdl:part name="parameters" element="ns1:getScopeNames"/>
+  </wsdl:message>
+  <wsdl:message name="getScopeNamesResponse">
+    <wsdl:part name="parameters" element="ns1:getScopeNamesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getScopesRequest">
+    <wsdl:part name="parameters" element="ns1:getScopes"/>
+  </wsdl:message>
+  <wsdl:message name="getScopesResponse">
+    <wsdl:part name="parameters" element="ns1:getScopesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="revokeAuthzForAppsByResoureOwnerRequest">
+    <wsdl:part name="parameters" element="ns1:revokeAuthzForAppsByResoureOwner"/>
+  </wsdl:message>
+  <wsdl:message name="revokeAuthzForAppsByResoureOwnerResponse">
+    <wsdl:part name="parameters" element="ns1:revokeAuthzForAppsByResoureOwnerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getSupportedIDTokenAlgorithmsRequest">
+    <wsdl:part name="parameters" element="ns1:getSupportedIDTokenAlgorithms"/>
+  </wsdl:message>
+  <wsdl:message name="getSupportedIDTokenAlgorithmsResponse">
+    <wsdl:part name="parameters" element="ns1:getSupportedIDTokenAlgorithmsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="OAuthAdminServicePortType">
+    <wsdl:operation name="updateApproveAlwaysForAppConsentByResourceOwner">
+      <wsdl:input message="tns:updateApproveAlwaysForAppConsentByResourceOwnerRequest" wsaw:Action="urn:updateApproveAlwaysForAppConsentByResourceOwner"/>
+      <wsdl:output message="tns:updateApproveAlwaysForAppConsentByResourceOwnerResponse" wsaw:Action="urn:updateApproveAlwaysForAppConsentByResourceOwnerResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:updateApproveAlwaysForAppConsentByResourceOwnerOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateOauthSecretKey">
+      <wsdl:input message="tns:updateOauthSecretKeyRequest" wsaw:Action="urn:updateOauthSecretKey"/>
+      <wsdl:output message="tns:updateOauthSecretKeyResponse" wsaw:Action="urn:updateOauthSecretKeyResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:updateOauthSecretKeyOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedGrantTypes">
+      <wsdl:input message="tns:getAllowedGrantTypesRequest" wsaw:Action="urn:getAllowedGrantTypes"/>
+      <wsdl:output message="tns:getAllowedGrantTypesResponse" wsaw:Action="urn:getAllowedGrantTypesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateAndRetrieveOauthSecretKey">
+      <wsdl:input message="tns:updateAndRetrieveOauthSecretKeyRequest" wsaw:Action="urn:updateAndRetrieveOauthSecretKey"/>
+      <wsdl:output message="tns:updateAndRetrieveOauthSecretKeyResponse" wsaw:Action="urn:updateAndRetrieveOauthSecretKeyResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:updateAndRetrieveOauthSecretKeyOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="isHashDisabled">
+      <wsdl:input message="tns:isHashDisabledRequest" wsaw:Action="urn:isHashDisabled"/>
+      <wsdl:output message="tns:isHashDisabledResponse" wsaw:Action="urn:isHashDisabledResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthApplicationData">
+      <wsdl:input message="tns:registerOAuthApplicationDataRequest" wsaw:Action="urn:registerOAuthApplicationData"/>
+      <wsdl:output message="tns:registerOAuthApplicationDataResponse" wsaw:Action="urn:registerOAuthApplicationDataResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:registerOAuthApplicationDataOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getClaims">
+      <wsdl:input message="tns:getClaimsRequest" wsaw:Action="urn:getClaims"/>
+      <wsdl:output message="tns:getClaimsResponse" wsaw:Action="urn:getClaimsResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getClaimsOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="removeOAuthApplicationData">
+      <wsdl:input message="tns:removeOAuthApplicationDataRequest" wsaw:Action="urn:removeOAuthApplicationData"/>
+      <wsdl:output message="tns:removeOAuthApplicationDataResponse" wsaw:Action="urn:removeOAuthApplicationDataResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:removeOAuthApplicationDataOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationData">
+      <wsdl:input message="tns:getOAuthApplicationDataRequest" wsaw:Action="urn:getOAuthApplicationData"/>
+      <wsdl:output message="tns:getOAuthApplicationDataResponse" wsaw:Action="urn:getOAuthApplicationDataResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getOAuthApplicationDataOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOauthApplicationState">
+      <wsdl:input message="tns:getOauthApplicationStateRequest" wsaw:Action="urn:getOauthApplicationState"/>
+      <wsdl:output message="tns:getOauthApplicationStateResponse" wsaw:Action="urn:getOauthApplicationStateResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getOauthApplicationStateOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="isPKCESupportEnabled">
+      <wsdl:input message="tns:isPKCESupportEnabledRequest" wsaw:Action="urn:isPKCESupportEnabled"/>
+      <wsdl:output message="tns:isPKCESupportEnabledResponse" wsaw:Action="urn:isPKCESupportEnabledResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="isRefreshTokenRenewalEnabled">
+      <wsdl:input message="tns:isRefreshTokenRenewalEnabledRequest" wsaw:Action="urn:isRefreshTokenRenewalEnabled"/>
+      <wsdl:output message="tns:isRefreshTokenRenewalEnabledResponse" wsaw:Action="urn:isRefreshTokenRenewalEnabledResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationDataByAppName">
+      <wsdl:input message="tns:getOAuthApplicationDataByAppNameRequest" wsaw:Action="urn:getOAuthApplicationDataByAppName"/>
+      <wsdl:output message="tns:getOAuthApplicationDataByAppNameResponse" wsaw:Action="urn:getOAuthApplicationDataByAppNameResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getOAuthApplicationDataByAppNameOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="addScope">
+      <wsdl:input message="tns:addScopeRequest" wsaw:Action="urn:addScope"/>
+      <wsdl:output message="tns:addScopeResponse" wsaw:Action="urn:addScopeResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:addScopeOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerApplication">
+      <wsdl:input message="tns:updateConsumerApplicationRequest" wsaw:Action="urn:updateConsumerApplication"/>
+      <wsdl:output message="tns:updateConsumerApplicationResponse" wsaw:Action="urn:updateConsumerApplicationResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:updateConsumerApplicationOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthConsumer">
+      <wsdl:input message="tns:registerOAuthConsumerRequest" wsaw:Action="urn:registerOAuthConsumer"/>
+      <wsdl:output message="tns:registerOAuthConsumerResponse" wsaw:Action="urn:registerOAuthConsumerResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:registerOAuthConsumerOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="registerAndRetrieveOAuthApplicationData">
+      <wsdl:input message="tns:registerAndRetrieveOAuthApplicationDataRequest" wsaw:Action="urn:registerAndRetrieveOAuthApplicationData"/>
+      <wsdl:output message="tns:registerAndRetrieveOAuthApplicationDataResponse" wsaw:Action="urn:registerAndRetrieveOAuthApplicationDataResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:registerAndRetrieveOAuthApplicationDataOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="isScopeExist">
+      <wsdl:input message="tns:isScopeExistRequest" wsaw:Action="urn:isScopeExist"/>
+      <wsdl:output message="tns:isScopeExistResponse" wsaw:Action="urn:isScopeExistResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:isScopeExistOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerAppState">
+      <wsdl:input message="tns:updateConsumerAppStateRequest" wsaw:Action="urn:updateConsumerAppState"/>
+      <wsdl:output message="tns:updateConsumerAppStateResponse" wsaw:Action="urn:updateConsumerAppStateResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:updateConsumerAppStateOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedTokenTypes">
+      <wsdl:input message="tns:getSupportedTokenTypesRequest" wsaw:Action="urn:getSupportedTokenTypes"/>
+      <wsdl:output message="tns:getSupportedTokenTypesResponse" wsaw:Action="urn:getSupportedTokenTypesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteScope">
+      <wsdl:input message="tns:deleteScopeRequest" wsaw:Action="urn:deleteScope"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:deleteScopeOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAudiences">
+      <wsdl:input message="tns:getAudiencesRequest" wsaw:Action="urn:getAudiences"/>
+      <wsdl:output message="tns:getAudiencesResponse" wsaw:Action="urn:getAudiencesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedScopeValidators">
+      <wsdl:input message="tns:getAllowedScopeValidatorsRequest" wsaw:Action="urn:getAllowedScopeValidators"/>
+      <wsdl:output message="tns:getAllowedScopeValidatorsResponse" wsaw:Action="urn:getAllowedScopeValidatorsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAllOAuthApplicationData">
+      <wsdl:input message="tns:getAllOAuthApplicationDataRequest" wsaw:Action="urn:getAllOAuthApplicationData"/>
+      <wsdl:output message="tns:getAllOAuthApplicationDataResponse" wsaw:Action="urn:getAllOAuthApplicationDataResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getAllOAuthApplicationDataOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAppsAuthorizedByUser">
+      <wsdl:input message="tns:getAppsAuthorizedByUserRequest" wsaw:Action="urn:getAppsAuthorizedByUser"/>
+      <wsdl:output message="tns:getAppsAuthorizedByUserResponse" wsaw:Action="urn:getAppsAuthorizedByUserResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getAppsAuthorizedByUserOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateScope">
+      <wsdl:input message="tns:updateScopeRequest" wsaw:Action="urn:updateScope"/>
+      <wsdl:output message="tns:updateScopeResponse" wsaw:Action="urn:updateScopeResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:updateScopeOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getTokenExpiryTimes">
+      <wsdl:input message="tns:getTokenExpiryTimesRequest" wsaw:Action="urn:getTokenExpiryTimes"/>
+      <wsdl:output message="tns:getTokenExpiryTimesResponse" wsaw:Action="urn:getTokenExpiryTimesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getScopeNames">
+      <wsdl:input message="tns:getScopeNamesRequest" wsaw:Action="urn:getScopeNames"/>
+      <wsdl:output message="tns:getScopeNamesResponse" wsaw:Action="urn:getScopeNamesResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getScopeNamesOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getScopes">
+      <wsdl:input message="tns:getScopesRequest" wsaw:Action="urn:getScopes"/>
+      <wsdl:output message="tns:getScopesResponse" wsaw:Action="urn:getScopesResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:getScopesOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="revokeAuthzForAppsByResoureOwner">
+      <wsdl:input message="tns:revokeAuthzForAppsByResoureOwnerRequest" wsaw:Action="urn:revokeAuthzForAppsByResoureOwner"/>
+      <wsdl:output message="tns:revokeAuthzForAppsByResoureOwnerResponse" wsaw:Action="urn:revokeAuthzForAppsByResoureOwnerResponse"/>
+      <wsdl:fault message="tns:OAuthAdminServiceIdentityOAuthAdminException" name="OAuthAdminServiceIdentityOAuthAdminException" wsaw:Action="urn:revokeAuthzForAppsByResoureOwnerOAuthAdminServiceIdentityOAuthAdminException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedIDTokenAlgorithms">
+      <wsdl:input message="tns:getSupportedIDTokenAlgorithmsRequest" wsaw:Action="urn:getSupportedIDTokenAlgorithms"/>
+      <wsdl:output message="tns:getSupportedIDTokenAlgorithmsResponse" wsaw:Action="urn:getSupportedIDTokenAlgorithmsResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OAuthAdminServiceSoap11Binding" type="tns:OAuthAdminServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="updateApproveAlwaysForAppConsentByResourceOwner">
+      <soap:operation soapAction="urn:updateApproveAlwaysForAppConsentByResourceOwner" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateOauthSecretKey">
+      <soap:operation soapAction="urn:updateOauthSecretKey" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedGrantTypes">
+      <soap:operation soapAction="urn:getAllowedGrantTypes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAndRetrieveOauthSecretKey">
+      <soap:operation soapAction="urn:updateAndRetrieveOauthSecretKey" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isHashDisabled">
+      <soap:operation soapAction="urn:isHashDisabled" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthApplicationData">
+      <soap:operation soapAction="urn:registerOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getClaims">
+      <soap:operation soapAction="urn:getClaims" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeOAuthApplicationData">
+      <soap:operation soapAction="urn:removeOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationData">
+      <soap:operation soapAction="urn:getOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOauthApplicationState">
+      <soap:operation soapAction="urn:getOauthApplicationState" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isPKCESupportEnabled">
+      <soap:operation soapAction="urn:isPKCESupportEnabled" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isRefreshTokenRenewalEnabled">
+      <soap:operation soapAction="urn:isRefreshTokenRenewalEnabled" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationDataByAppName">
+      <soap:operation soapAction="urn:getOAuthApplicationDataByAppName" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addScope">
+      <soap:operation soapAction="urn:addScope" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerApplication">
+      <soap:operation soapAction="urn:updateConsumerApplication" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthConsumer">
+      <soap:operation soapAction="urn:registerOAuthConsumer" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerAndRetrieveOAuthApplicationData">
+      <soap:operation soapAction="urn:registerAndRetrieveOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isScopeExist">
+      <soap:operation soapAction="urn:isScopeExist" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerAppState">
+      <soap:operation soapAction="urn:updateConsumerAppState" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedTokenTypes">
+      <soap:operation soapAction="urn:getSupportedTokenTypes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteScope">
+      <soap:operation soapAction="urn:deleteScope" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAudiences">
+      <soap:operation soapAction="urn:getAudiences" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedScopeValidators">
+      <soap:operation soapAction="urn:getAllowedScopeValidators" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllOAuthApplicationData">
+      <soap:operation soapAction="urn:getAllOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAppsAuthorizedByUser">
+      <soap:operation soapAction="urn:getAppsAuthorizedByUser" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateScope">
+      <soap:operation soapAction="urn:updateScope" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTokenExpiryTimes">
+      <soap:operation soapAction="urn:getTokenExpiryTimes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScopeNames">
+      <soap:operation soapAction="urn:getScopeNames" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getScopes">
+      <soap:operation soapAction="urn:getScopes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="revokeAuthzForAppsByResoureOwner">
+      <soap:operation soapAction="urn:revokeAuthzForAppsByResoureOwner" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedIDTokenAlgorithms">
+      <soap:operation soapAction="urn:getSupportedIDTokenAlgorithms" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OAuthAdminServiceSoap12Binding" type="tns:OAuthAdminServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="updateApproveAlwaysForAppConsentByResourceOwner">
+      <soap12:operation soapAction="urn:updateApproveAlwaysForAppConsentByResourceOwner" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateOauthSecretKey">
+      <soap12:operation soapAction="urn:updateOauthSecretKey" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedGrantTypes">
+      <soap12:operation soapAction="urn:getAllowedGrantTypes" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAndRetrieveOauthSecretKey">
+      <soap12:operation soapAction="urn:updateAndRetrieveOauthSecretKey" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isHashDisabled">
+      <soap12:operation soapAction="urn:isHashDisabled" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthApplicationData">
+      <soap12:operation soapAction="urn:registerOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getClaims">
+      <soap12:operation soapAction="urn:getClaims" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeOAuthApplicationData">
+      <soap12:operation soapAction="urn:removeOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationData">
+      <soap12:operation soapAction="urn:getOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOauthApplicationState">
+      <soap12:operation soapAction="urn:getOauthApplicationState" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isPKCESupportEnabled">
+      <soap12:operation soapAction="urn:isPKCESupportEnabled" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isRefreshTokenRenewalEnabled">
+      <soap12:operation soapAction="urn:isRefreshTokenRenewalEnabled" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationDataByAppName">
+      <soap12:operation soapAction="urn:getOAuthApplicationDataByAppName" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addScope">
+      <soap12:operation soapAction="urn:addScope" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerApplication">
+      <soap12:operation soapAction="urn:updateConsumerApplication" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthConsumer">
+      <soap12:operation soapAction="urn:registerOAuthConsumer" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerAndRetrieveOAuthApplicationData">
+      <soap12:operation soapAction="urn:registerAndRetrieveOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isScopeExist">
+      <soap12:operation soapAction="urn:isScopeExist" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerAppState">
+      <soap12:operation soapAction="urn:updateConsumerAppState" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedTokenTypes">
+      <soap12:operation soapAction="urn:getSupportedTokenTypes" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteScope">
+      <soap12:operation soapAction="urn:deleteScope" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAudiences">
+      <soap12:operation soapAction="urn:getAudiences" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedScopeValidators">
+      <soap12:operation soapAction="urn:getAllowedScopeValidators" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllOAuthApplicationData">
+      <soap12:operation soapAction="urn:getAllOAuthApplicationData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAppsAuthorizedByUser">
+      <soap12:operation soapAction="urn:getAppsAuthorizedByUser" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateScope">
+      <soap12:operation soapAction="urn:updateScope" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTokenExpiryTimes">
+      <soap12:operation soapAction="urn:getTokenExpiryTimes" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScopeNames">
+      <soap12:operation soapAction="urn:getScopeNames" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getScopes">
+      <soap12:operation soapAction="urn:getScopes" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="revokeAuthzForAppsByResoureOwner">
+      <soap12:operation soapAction="urn:revokeAuthzForAppsByResoureOwner" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="OAuthAdminServiceIdentityOAuthAdminException">
+        <soap12:fault use="literal" name="OAuthAdminServiceIdentityOAuthAdminException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedIDTokenAlgorithms">
+      <soap12:operation soapAction="urn:getSupportedIDTokenAlgorithms" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OAuthAdminServiceHttpBinding" type="tns:OAuthAdminServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="updateApproveAlwaysForAppConsentByResourceOwner">
+      <http:operation location="updateApproveAlwaysForAppConsentByResourceOwner"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOauthSecretKey">
+      <http:operation location="updateOauthSecretKey"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedGrantTypes">
+      <http:operation location="getAllowedGrantTypes"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAndRetrieveOauthSecretKey">
+      <http:operation location="updateAndRetrieveOauthSecretKey"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isHashDisabled">
+      <http:operation location="isHashDisabled"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthApplicationData">
+      <http:operation location="registerOAuthApplicationData"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClaims">
+      <http:operation location="getClaims"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeOAuthApplicationData">
+      <http:operation location="removeOAuthApplicationData"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationData">
+      <http:operation location="getOAuthApplicationData"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOauthApplicationState">
+      <http:operation location="getOauthApplicationState"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isPKCESupportEnabled">
+      <http:operation location="isPKCESupportEnabled"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isRefreshTokenRenewalEnabled">
+      <http:operation location="isRefreshTokenRenewalEnabled"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOAuthApplicationDataByAppName">
+      <http:operation location="getOAuthApplicationDataByAppName"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addScope">
+      <http:operation location="addScope"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerApplication">
+      <http:operation location="updateConsumerApplication"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerOAuthConsumer">
+      <http:operation location="registerOAuthConsumer"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerAndRetrieveOAuthApplicationData">
+      <http:operation location="registerAndRetrieveOAuthApplicationData"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isScopeExist">
+      <http:operation location="isScopeExist"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsumerAppState">
+      <http:operation location="updateConsumerAppState"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedTokenTypes">
+      <http:operation location="getSupportedTokenTypes"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteScope">
+      <http:operation location="deleteScope"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getAudiences">
+      <http:operation location="getAudiences"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllowedScopeValidators">
+      <http:operation location="getAllowedScopeValidators"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllOAuthApplicationData">
+      <http:operation location="getAllOAuthApplicationData"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAppsAuthorizedByUser">
+      <http:operation location="getAppsAuthorizedByUser"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateScope">
+      <http:operation location="updateScope"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTokenExpiryTimes">
+      <http:operation location="getTokenExpiryTimes"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScopeNames">
+      <http:operation location="getScopeNames"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScopes">
+      <http:operation location="getScopes"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="revokeAuthzForAppsByResoureOwner">
+      <http:operation location="revokeAuthzForAppsByResoureOwner"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSupportedIDTokenAlgorithms">
+      <http:operation location="getSupportedIDTokenAlgorithms"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OAuthAdminService">
+    <wsdl:port name="OAuthAdminServiceHttpsSoap11Endpoint" binding="tns:OAuthAdminServiceSoap11Binding">
+      <soap:address location="https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="OAuthAdminServiceHttpsSoap12Endpoint" binding="tns:OAuthAdminServiceSoap12Binding">
+      <soap12:address location="https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap12Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="OAuthAdminServiceHttpsEndpoint" binding="tns:OAuthAdminServiceHttpBinding">
+      <http:address location="https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsEndpoint/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint></con:endpoints><con:operation id="4cfd7673-23d2-4355-bf79-025a2b04e951" isOneWay="false" action="urn:addScope" name="addScope" bindingOperationName="addScope" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="45d1a6e3-26fc-4c34-9aa2-8f9c0e764cee" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:addScope>
+         <!--Optional:-->
+         <xsd:scope>reseller</xsd:scope>
+         <!--Zero or more repetitions:-->
+         <xsd:claims>gender</xsd:claims>
+      </xsd:addScope>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addScope"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="552bd730-dc92-4442-8e38-8f0f5e69547b" isOneWay="false" action="urn:deleteScope" name="deleteScope" bindingOperationName="deleteScope" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="460c11fe-4463-410a-b576-6b9339d5c581" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:deleteScope>
+         <!--Optional:-->
+         <xsd:scope>ascasc</xsd:scope>
+      </xsd:deleteScope>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:deleteScope"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3ca4113d-0392-4400-a1b9-3b93a81a4788" isOneWay="false" action="urn:getAllOAuthApplicationData" name="getAllOAuthApplicationData" bindingOperationName="getAllOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6f0961b6-939c-4f7d-94a8-40c96e7d315c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getAllOAuthApplicationData/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllOAuthApplicationData"/></con:call></con:operation><con:operation id="dd05e70e-91f0-4a97-97c4-f2ec58b89ac1" isOneWay="false" action="urn:getAllowedGrantTypes" name="getAllowedGrantTypes" bindingOperationName="getAllowedGrantTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c769af40-4352-4673-8727-3f2dfcc532ce" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getAllowedGrantTypes/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllowedGrantTypes"/></con:call></con:operation><con:operation id="68190276-2434-4384-9241-2206afca38e4" isOneWay="false" action="urn:getAllowedScopeValidators" name="getAllowedScopeValidators" bindingOperationName="getAllowedScopeValidators" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c2645fea-5808-4b20-ad3d-9eaab473bbae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getAllowedScopeValidators/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllowedScopeValidators"/></con:call></con:operation><con:operation id="b8a6bf63-600d-48cd-a7e5-4cedf0f551b7" isOneWay="false" action="urn:getAppsAuthorizedByUser" name="getAppsAuthorizedByUser" bindingOperationName="getAppsAuthorizedByUser" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="153fe312-8dca-4921-ad33-450b0c4e879f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getAppsAuthorizedByUser/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAppsAuthorizedByUser"/></con:call></con:operation><con:operation id="c3604ad4-cc69-4e32-a66a-2e8c73835b14" isOneWay="false" action="urn:getAudiences" name="getAudiences" bindingOperationName="getAudiences" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0fbeca4c-043a-43c8-a783-7e0dc8e0870c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   &lt;soapenv:Header/>
+   &lt;soapenv:Body/>
+&lt;/soapenv:Envelope></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAudiences"/></con:call></con:operation><con:operation id="b3239283-2e21-4416-84ad-1ccc422b0585" isOneWay="false" action="urn:getClaims" name="getClaims" bindingOperationName="getClaims" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2faff254-476a-4732-b498-bd611e2d018a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getClaims>
+         <!--Optional:-->
+         <xsd:scope>openid</xsd:scope>
+      </xsd:getClaims>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getClaims"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9953e244-0a6d-4b89-8c9c-68165c09e8b9" isOneWay="false" action="urn:getOAuthApplicationData" name="getOAuthApplicationData" bindingOperationName="getOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c67236e2-43f6-405e-bf06-50452ee5eb01" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:getOAuthApplicationData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getOAuthApplicationData"/></con:call></con:operation><con:operation id="389bf52c-184c-4753-8621-6e647a5b7032" isOneWay="false" action="urn:getOAuthApplicationDataByAppName" name="getOAuthApplicationDataByAppName" bindingOperationName="getOAuthApplicationDataByAppName" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="394a2730-b445-405c-af74-722f86d44bf1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getOAuthApplicationDataByAppName>
+         <!--Optional:-->
+         <xsd:appName>?</xsd:appName>
+      </xsd:getOAuthApplicationDataByAppName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getOAuthApplicationDataByAppName"/></con:call></con:operation><con:operation id="7aa87d4c-d226-4ef2-acef-78c1f0c5819a" isOneWay="false" action="urn:getOauthApplicationState" name="getOauthApplicationState" bindingOperationName="getOauthApplicationState" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0ef84fe4-1622-47dd-8701-3710ac6d7754" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getOauthApplicationState>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:getOauthApplicationState>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getOauthApplicationState"/></con:call></con:operation><con:operation id="16a5476d-8bc5-452f-ad84-681dd110bf46" isOneWay="false" action="urn:getScopeNames" name="getScopeNames" bindingOperationName="getScopeNames" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="acf77dae-9b68-4399-886b-bd721a910c36" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getScopeNames/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getScopeNames"/></con:call></con:operation><con:operation id="dd46eff4-7eb6-46a4-9bf6-a26093dda905" isOneWay="false" action="urn:getScopes" name="getScopes" bindingOperationName="getScopes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="84292a71-6051-4a98-814b-70d3ccdf193b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getScopes/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:password>admin</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getScopes"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5439a2c6-1cd7-4b03-9114-e3f46963e799" isOneWay="false" action="urn:getSupportedIDTokenAlgorithms" name="getSupportedIDTokenAlgorithms" bindingOperationName="getSupportedIDTokenAlgorithms" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="23835248-f299-46d0-91ab-57b06ece2808" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getSupportedIDTokenAlgorithms/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getSupportedIDTokenAlgorithms"/></con:call></con:operation><con:operation id="87ec4c4c-5b3c-46ce-85c2-c3bb35b458b8" isOneWay="false" action="urn:getSupportedTokenTypes" name="getSupportedTokenTypes" bindingOperationName="getSupportedTokenTypes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a3ac3565-7917-473d-a314-29461e739676" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getSupportedTokenTypes/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getSupportedTokenTypes"/></con:call></con:operation><con:operation id="f20204ff-3e23-40d1-a2d3-d30b729337f2" isOneWay="false" action="urn:getTokenExpiryTimes" name="getTokenExpiryTimes" bindingOperationName="getTokenExpiryTimes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2184b12f-dc47-4dc6-85ad-e5c0172db9b9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:getTokenExpiryTimes/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getTokenExpiryTimes"/></con:call></con:operation><con:operation id="23dde8c4-8f22-4d41-ab1e-09d0f5733ec3" isOneWay="false" action="urn:isHashDisabled" name="isHashDisabled" bindingOperationName="isHashDisabled" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="33335007-d040-4dd7-9270-95e699f7b9a4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:isHashDisabled/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isHashDisabled"/></con:call></con:operation><con:operation id="4ce55356-4d36-46c0-8ade-5ddee8a96d5c" isOneWay="false" action="urn:isPKCESupportEnabled" name="isPKCESupportEnabled" bindingOperationName="isPKCESupportEnabled" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="af3b4e75-8659-4a08-8726-43438fc48b17" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:isPKCESupportEnabled/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isPKCESupportEnabled"/></con:call></con:operation><con:operation id="6680c6d3-948b-4d82-bcc8-66130b67877a" isOneWay="false" action="urn:isRefreshTokenRenewalEnabled" name="isRefreshTokenRenewalEnabled" bindingOperationName="isRefreshTokenRenewalEnabled" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fde07ac6-a4e3-42d8-aff1-cd082fbd7e52" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:isRefreshTokenRenewalEnabled/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isRefreshTokenRenewalEnabled"/></con:call></con:operation><con:operation id="28b6220d-cd41-4c30-9349-2c747837c310" isOneWay="false" action="urn:isScopeExist" name="isScopeExist" bindingOperationName="isScopeExist" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="efb50b1a-6e06-435d-9a6e-707373582a0a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:isScopeExist>
+         <!--Optional:-->
+         <xsd:scope>?</xsd:scope>
+      </xsd:isScopeExist>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isScopeExist"/></con:call></con:operation><con:operation id="b2977173-dfff-4b15-a2f6-52d405436e37" isOneWay="false" action="urn:registerAndRetrieveOAuthApplicationData" name="registerAndRetrieveOAuthApplicationData" bindingOperationName="registerAndRetrieveOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f748f767-5827-459a-ae6b-2f2e6d745bdf" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:registerAndRetrieveOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:application>
+            <!--Optional:-->
+            <xsd1:OAuthVersion>?</xsd1:OAuthVersion>
+            <!--Optional:-->
+            <xsd1:applicationAccessTokenExpiryTime>?</xsd1:applicationAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:applicationName>?</xsd1:applicationName>
+            <!--Zero or more repetitions:-->
+            <xsd1:audiences>?</xsd1:audiences>
+            <!--Optional:-->
+            <xsd1:backChannelLogoutUrl>?</xsd1:backChannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:bypassClientCredentials>?</xsd1:bypassClientCredentials>
+            <!--Optional:-->
+            <xsd1:callbackUrl>?</xsd1:callbackUrl>
+            <!--Optional:-->
+            <xsd1:frontchannelLogoutUrl>?</xsd1:frontchannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:grantTypes>?</xsd1:grantTypes>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionAlgorithm>?</xsd1:idTokenEncryptionAlgorithm>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionEnabled>?</xsd1:idTokenEncryptionEnabled>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionMethod>?</xsd1:idTokenEncryptionMethod>
+            <!--Optional:-->
+            <xsd1:idTokenExpiryTime>?</xsd1:idTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:oauthConsumerKey>?</xsd1:oauthConsumerKey>
+            <!--Optional:-->
+            <xsd1:oauthConsumerSecret>?</xsd1:oauthConsumerSecret>
+            <!--Optional:-->
+            <xsd1:pkceMandatory>?</xsd1:pkceMandatory>
+            <!--Optional:-->
+            <xsd1:pkceSupportPlain>?</xsd1:pkceSupportPlain>
+            <!--Optional:-->
+            <xsd1:refreshTokenExpiryTime>?</xsd1:refreshTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:renewRefreshTokenEnabled>?</xsd1:renewRefreshTokenEnabled>
+            <!--Optional:-->
+            <xsd1:requestObjectSignatureValidationEnabled>?</xsd1:requestObjectSignatureValidationEnabled>
+            <!--Zero or more repetitions:-->
+            <xsd1:scopeValidators>?</xsd1:scopeValidators>
+            <!--Optional:-->
+            <xsd1:state>?</xsd1:state>
+            <!--Optional:-->
+            <xsd1:tokenType>?</xsd1:tokenType>
+            <!--Optional:-->
+            <xsd1:userAccessTokenExpiryTime>?</xsd1:userAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:username>?</xsd1:username>
+         </xsd:application>
+      </xsd:registerAndRetrieveOAuthApplicationData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:registerAndRetrieveOAuthApplicationData"/></con:call></con:operation><con:operation id="5c8ba3b6-39a5-4368-a811-6094d9a96b35" isOneWay="false" action="urn:registerOAuthApplicationData" name="registerOAuthApplicationData" bindingOperationName="registerOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c4e7a7a0-51ee-47e4-83a6-296743acc69d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:registerOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:application>
+            <!--Optional:-->
+            <xsd1:OAuthVersion>?</xsd1:OAuthVersion>
+            <!--Optional:-->
+            <xsd1:applicationAccessTokenExpiryTime>?</xsd1:applicationAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:applicationName>?</xsd1:applicationName>
+            <!--Zero or more repetitions:-->
+            <xsd1:audiences>?</xsd1:audiences>
+            <!--Optional:-->
+            <xsd1:backChannelLogoutUrl>?</xsd1:backChannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:bypassClientCredentials>?</xsd1:bypassClientCredentials>
+            <!--Optional:-->
+            <xsd1:callbackUrl>?</xsd1:callbackUrl>
+            <!--Optional:-->
+            <xsd1:frontchannelLogoutUrl>?</xsd1:frontchannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:grantTypes>?</xsd1:grantTypes>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionAlgorithm>?</xsd1:idTokenEncryptionAlgorithm>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionEnabled>?</xsd1:idTokenEncryptionEnabled>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionMethod>?</xsd1:idTokenEncryptionMethod>
+            <!--Optional:-->
+            <xsd1:idTokenExpiryTime>?</xsd1:idTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:oauthConsumerKey>?</xsd1:oauthConsumerKey>
+            <!--Optional:-->
+            <xsd1:oauthConsumerSecret>?</xsd1:oauthConsumerSecret>
+            <!--Optional:-->
+            <xsd1:pkceMandatory>?</xsd1:pkceMandatory>
+            <!--Optional:-->
+            <xsd1:pkceSupportPlain>?</xsd1:pkceSupportPlain>
+            <!--Optional:-->
+            <xsd1:refreshTokenExpiryTime>?</xsd1:refreshTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:renewRefreshTokenEnabled>?</xsd1:renewRefreshTokenEnabled>
+            <!--Optional:-->
+            <xsd1:requestObjectSignatureValidationEnabled>?</xsd1:requestObjectSignatureValidationEnabled>
+            <!--Zero or more repetitions:-->
+            <xsd1:scopeValidators>?</xsd1:scopeValidators>
+            <!--Optional:-->
+            <xsd1:state>?</xsd1:state>
+            <!--Optional:-->
+            <xsd1:tokenType>?</xsd1:tokenType>
+            <!--Optional:-->
+            <xsd1:userAccessTokenExpiryTime>?</xsd1:userAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:username>?</xsd1:username>
+         </xsd:application>
+      </xsd:registerOAuthApplicationData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:registerOAuthApplicationData"/></con:call></con:operation><con:operation id="ce93327f-93a1-4b50-8045-3b6903ad7c18" isOneWay="false" action="urn:registerOAuthConsumer" name="registerOAuthConsumer" bindingOperationName="registerOAuthConsumer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d23ccbf0-ae57-4839-ab1e-ae04e4dbd8b0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:registerOAuthConsumer/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:registerOAuthConsumer"/></con:call></con:operation><con:operation id="611103dc-7568-4f2b-a41d-4d961c73ab2f" isOneWay="false" action="urn:removeOAuthApplicationData" name="removeOAuthApplicationData" bindingOperationName="removeOAuthApplicationData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ceee75e4-9bd4-4d4c-9da0-1ef08093bae5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:removeOAuthApplicationData>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:removeOAuthApplicationData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:removeOAuthApplicationData"/></con:call></con:operation><con:operation id="ac1bbd48-7350-4de0-86d7-7896c357534f" isOneWay="false" action="urn:revokeAuthzForAppsByResoureOwner" name="revokeAuthzForAppsByResoureOwner" bindingOperationName="revokeAuthzForAppsByResoureOwner" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="784cadf5-e7dd-43d4-9a74-a315f5ef0bfe" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:revokeAuthzForAppsByResoureOwner>
+         <!--Optional:-->
+         <xsd:revokeRequestDTO>
+            <!--Zero or more repetitions:-->
+            <xsd1:apps>?</xsd1:apps>
+            <!--Optional:-->
+            <xsd1:authzUser>?</xsd1:authzUser>
+            <!--Optional:-->
+            <xsd1:consumerKey>?</xsd1:consumerKey>
+            <!--Optional:-->
+            <xsd1:consumerSecret>?</xsd1:consumerSecret>
+         </xsd:revokeRequestDTO>
+      </xsd:revokeAuthzForAppsByResoureOwner>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:revokeAuthzForAppsByResoureOwner"/></con:call></con:operation><con:operation id="34a4f940-09ce-4efe-ad26-d5bbb5321877" isOneWay="false" action="urn:updateAndRetrieveOauthSecretKey" name="updateAndRetrieveOauthSecretKey" bindingOperationName="updateAndRetrieveOauthSecretKey" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e703ac03-051c-4639-8f24-6d10ac579c44" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:updateAndRetrieveOauthSecretKey>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:updateAndRetrieveOauthSecretKey>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateAndRetrieveOauthSecretKey"/></con:call></con:operation><con:operation id="5405fb3e-3040-4103-8c62-e9f34d7f29b6" isOneWay="false" action="urn:updateApproveAlwaysForAppConsentByResourceOwner" name="updateApproveAlwaysForAppConsentByResourceOwner" bindingOperationName="updateApproveAlwaysForAppConsentByResourceOwner" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bc12889e-7f20-4e47-82d2-25e023f6dd4a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:updateApproveAlwaysForAppConsentByResourceOwner>
+         <!--Optional:-->
+         <xsd:appName>?</xsd:appName>
+         <!--Optional:-->
+         <xsd:state>?</xsd:state>
+      </xsd:updateApproveAlwaysForAppConsentByResourceOwner>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateApproveAlwaysForAppConsentByResourceOwner"/></con:call></con:operation><con:operation id="dbf6b234-2fa2-42c3-9b11-58b376138a04" isOneWay="false" action="urn:updateConsumerApplication" name="updateConsumerApplication" bindingOperationName="updateConsumerApplication" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dcfe9255-f3b6-42f7-8f49-ae1db2e7501d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.oauth.identity.carbon.wso2.org/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:updateConsumerApplication>
+         <!--Optional:-->
+         <xsd:consumerAppDTO>
+            <!--Optional:-->
+            <xsd1:OAuthVersion>?</xsd1:OAuthVersion>
+            <!--Optional:-->
+            <xsd1:applicationAccessTokenExpiryTime>?</xsd1:applicationAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:applicationName>?</xsd1:applicationName>
+            <!--Zero or more repetitions:-->
+            <xsd1:audiences>?</xsd1:audiences>
+            <!--Optional:-->
+            <xsd1:backChannelLogoutUrl>?</xsd1:backChannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:bypassClientCredentials>?</xsd1:bypassClientCredentials>
+            <!--Optional:-->
+            <xsd1:callbackUrl>?</xsd1:callbackUrl>
+            <!--Optional:-->
+            <xsd1:frontchannelLogoutUrl>?</xsd1:frontchannelLogoutUrl>
+            <!--Optional:-->
+            <xsd1:grantTypes>?</xsd1:grantTypes>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionAlgorithm>?</xsd1:idTokenEncryptionAlgorithm>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionEnabled>?</xsd1:idTokenEncryptionEnabled>
+            <!--Optional:-->
+            <xsd1:idTokenEncryptionMethod>?</xsd1:idTokenEncryptionMethod>
+            <!--Optional:-->
+            <xsd1:idTokenExpiryTime>?</xsd1:idTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:oauthConsumerKey>?</xsd1:oauthConsumerKey>
+            <!--Optional:-->
+            <xsd1:oauthConsumerSecret>?</xsd1:oauthConsumerSecret>
+            <!--Optional:-->
+            <xsd1:pkceMandatory>?</xsd1:pkceMandatory>
+            <!--Optional:-->
+            <xsd1:pkceSupportPlain>?</xsd1:pkceSupportPlain>
+            <!--Optional:-->
+            <xsd1:refreshTokenExpiryTime>?</xsd1:refreshTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:renewRefreshTokenEnabled>?</xsd1:renewRefreshTokenEnabled>
+            <!--Optional:-->
+            <xsd1:requestObjectSignatureValidationEnabled>?</xsd1:requestObjectSignatureValidationEnabled>
+            <!--Zero or more repetitions:-->
+            <xsd1:scopeValidators>?</xsd1:scopeValidators>
+            <!--Optional:-->
+            <xsd1:state>?</xsd1:state>
+            <!--Optional:-->
+            <xsd1:tokenType>?</xsd1:tokenType>
+            <!--Optional:-->
+            <xsd1:userAccessTokenExpiryTime>?</xsd1:userAccessTokenExpiryTime>
+            <!--Optional:-->
+            <xsd1:username>?</xsd1:username>
+         </xsd:consumerAppDTO>
+      </xsd:updateConsumerApplication>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateConsumerApplication"/></con:call></con:operation><con:operation id="570185cb-8425-4005-a769-20dd4981b3bf" isOneWay="false" action="urn:updateConsumerAppState" name="updateConsumerAppState" bindingOperationName="updateConsumerAppState" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fc0d98f9-1f79-4ac3-941b-eb3a94cce56c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:updateConsumerAppState>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+         <!--Optional:-->
+         <xsd:newState>?</xsd:newState>
+      </xsd:updateConsumerAppState>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateConsumerAppState"/></con:call></con:operation><con:operation id="835053f7-0b77-45d6-a8c8-0e29b728cf0b" isOneWay="false" action="urn:updateOauthSecretKey" name="updateOauthSecretKey" bindingOperationName="updateOauthSecretKey" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="65ec659a-1f34-4658-b4d6-ba7cc1f41545" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:updateOauthSecretKey>
+         <!--Optional:-->
+         <xsd:consumerKey>?</xsd:consumerKey>
+      </xsd:updateOauthSecretKey>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateOauthSecretKey"/></con:call></con:operation><con:operation id="394c5b55-588f-41f3-a1ab-9fd120800fca" isOneWay="false" action="urn:updateScope" name="updateScope" bindingOperationName="updateScope" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e35f930d-dd2e-48c4-b7ac-665a8a1079b8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/services/OAuthAdminService.OAuthAdminServiceHttpsSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://org.apache.axis2/xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <xsd:updateScope>
+         <!--Optional:-->
+         <xsd:scope>openid</xsd:scope>
+         <!--Zero or more repetitions:-->
+         <xsd:addClaims>shopid</xsd:addClaims>
+         <xsd:addClaims>customer_type</xsd:addClaims>
+         <xsd:addClaims>user_role</xsd:addClaims>
+      </xsd:updateScope>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:updateScope"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

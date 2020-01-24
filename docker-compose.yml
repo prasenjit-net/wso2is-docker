@@ -3,4 +3,4 @@ version: '3.7'
 services:
   wso2is10:
     build: .
-    image: identityorg/wso2is58:1.2
+    image: identityorg/wso2is58:1.3

@@ -32,7 +32,7 @@ services:
         mode: 0440
 
   wso2is:
-    image: identityorg/wso2is58:1.1
+    image: identityorg/wso2is58:1.3
     depends_on:
       - mysql
     networks:
@@ -114,6 +114,11 @@ services:
         uid: "802"
         gid: "802"
         mode: 0440
+      - source: application-authentication
+        target: /home/wso2carbon/wso2is-5.8.0/repository/conf/identity/application-authentication.xml
+        uid: "802"
+        gid: "802"
+        mode: 0440
 
   mysql:
     image: mysql:5
@@ -167,6 +172,8 @@ configs:
     file: ./traefik/traefik.yml
   traefik-dyn:
     file: ./traefik/traefik-dyn.yml
+  application-authentication:
+    file: ./wso2is/application-authentication.xml
 
 secrets:
   traefik-key:

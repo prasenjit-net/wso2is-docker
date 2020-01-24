@@ -98,7 +98,7 @@
         <OpenIDUserPattern>${carbon.protocol}://${carbon.host}:${carbon.management.port}/openid</OpenIDUserPattern>
         <OpenIDLoginUrl>${carbon.protocol}://${carbon.host}:${carbon.management.port}/authenticationendpoint/openid_login.do</OpenIDLoginUrl>
         <!-- If the users must be prompted for approval -->
-        <OpenIDSkipUserConsent>false</OpenIDSkipUserConsent>
+        <OpenIDSkipUserConsent>true</OpenIDSkipUserConsent>
         <!-- Expiry time of the OpenID RememberMe token in minutes -->
         <OpenIDRememberMeExpiry>7200</OpenIDRememberMeExpiry>
         <!-- To enable or disable openid dumb mode -->
@@ -424,7 +424,7 @@
             <UserInfoEndpointRequestValidator>org.wso2.carbon.identity.oauth.endpoint.user.impl.UserInforRequestDefaultValidator</UserInfoEndpointRequestValidator>
             <UserInfoEndpointAccessTokenValidator>org.wso2.carbon.identity.oauth.endpoint.user.impl.UserInfoISAccessTokenValidator</UserInfoEndpointAccessTokenValidator>
             <UserInfoEndpointResponseBuilder>org.wso2.carbon.identity.oauth.endpoint.user.impl.UserInfoJSONResponseBuilder</UserInfoEndpointResponseBuilder>
-            <SkipUserConsent>false</SkipUserConsent>
+            <SkipUserConsent>true</SkipUserConsent>
             <!-- Sign the ID Token with Service Provider Tenant Private Key-->
             <SignJWTWithSPKey>true</SignJWTWithSPKey>
             <!-- Add tenant domain to 'realm' claim of ID Token-->
@@ -547,7 +547,7 @@
 
     <Consent>
         <!--Specify whether consent management should be enable during SSO.-->
-        <EnableSSOConsentManagement>true</EnableSSOConsentManagement>
+        <EnableSSOConsentManagement>false</EnableSSOConsentManagement>
     </Consent>
 
     <SecurityTokenService>
@@ -789,7 +789,7 @@
                        orderId="98" enable="false"/>
         <EventListener type="org.wso2.carbon.identity.core.handler.AbstractIdentityHandler"
                        name="org.wso2.carbon.identity.application.authentication.framework.handler.request.impl.consent.ConsentMgtPostAuthnHandler"
-                       orderId="110" enable="true"/>
+                       orderId="110" enable="false"/>
 
         <EventListener type="org.wso2.carbon.user.core.listener.UserOperationEventListener"
                        name="org.wso2.carbon.identity.mgt.listener.UserSessionTerminationListener"
