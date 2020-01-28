@@ -1,0 +1,69 @@
+@username = reseller1
+@password = reseller1
+@admin_user = admin
+@admin_password = admin
+
+# @name create_reseller
+POST /api/identity/user/v1.0/createUpdateUser HTTP/1.1
+Host: localhost:443
+Content-Type: application/json
+Authorization: Basic {{admin_user}} {{admin_password}}
+
+{
+    "email": "{{username}}",
+    "role": "Tele2Shops",
+    "resellerShopId": "2202912",
+    "customerType": "Reseller"
+}
+
+###
+# @name get_act_link
+POST /api/identity/recovery/v0.9/getUserActivationLink HTTP/1.1
+Host: localhost:443
+Content-Type: application/json
+Authorization: Basic {{admin_user}} {{admin_password}}
+
+{
+ "username" :"{{username}}"
+}
+
+###
+# @name activate_reseller
+POST /api/identity/user/v1.0/validate-code HTTP/1.1
+Host: localhost:443
+Content-Type: application/json
+Authorization: Basic {{admin_user}} {{admin_password}}
+
+{
+    "code": "{{get_act_link.response.body.code}}",
+    "properties": []
+}
+
+###
+# @name get_password_code
+POST /api/identity/recovery/v0.9/recover-password?type=email&notify=false HTTP/1.1
+Host: localhost
+Content-Type: application/json
+Authorization: Basic {{admin_user}} {{admin_password}}
+
+{
+    "user": {
+        "username": "{{username}}",
+        "realm": "PRIMARY",
+        "tenant-domain":"carbon.super"
+    },
+    "properties": []
+}
+
+###
+# @name set_password
+POST /api/identity/recovery/v0.9/set-password HTTP/1.1
+Host: localhost:443
+Content-Type: application/json
+Authorization: Basic {{admin_user}} {{admin_password}}
+
+{
+    "key": "{{get_password_code.response.body.*}}",
+    "password": "{{password}}",
+    "properties": []
+}

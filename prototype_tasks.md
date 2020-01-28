@@ -27,10 +27,5 @@ Thease are the assumtions considered for prototype
 
 - new activation link retrieval
 - User creation api wrapper
-
-## APIs needed but not included in prototype scope
-
 - validate activation code
-- check password and update password with UID
-
-These APIs will be included in actual implementation of the instance.
+- recover password and update password with username
