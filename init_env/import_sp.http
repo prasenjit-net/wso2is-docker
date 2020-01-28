@@ -1,0 +1,142 @@
+POST /services/IdentityApplicationManagementService.IdentityApplicationManagementServiceHttpsEndpoint/ HTTP/1.1
+Host: localhost
+Content-Type: application/xml
+Authorization: Basic admin admin
+
+<xsd:importApplication xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://model.common.application.identity.carbon.wso2.org/xsd">
+    <xsd:spFileContent>
+        <xsd1:content>&lt;?xml version="1.0" encoding="UTF-8"?>&lt;ServiceProvider>
+  &lt;ApplicationName>Reseller_Portal_OIDC&lt;/ApplicationName>
+  &lt;Description/>
+  &lt;InboundAuthenticationConfig>
+    &lt;InboundAuthenticationRequestConfigs>
+      &lt;InboundAuthenticationRequestConfig>
+        &lt;InboundAuthKey>sp1&lt;/InboundAuthKey>
+        &lt;InboundAuthType>passivests&lt;/InboundAuthType>
+        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>
+        &lt;Properties/>
+      &lt;/InboundAuthenticationRequestConfig>
+      &lt;InboundAuthenticationRequestConfig>
+        &lt;InboundAuthKey>Jp1GdkPACkzRAly8e1tg8U1wl5Aa&lt;/InboundAuthKey>
+        &lt;InboundAuthType>oauth2&lt;/InboundAuthType>
+        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>
+        &lt;inboundConfiguration>&lt;![CDATA[&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+&lt;oAuthAppDO>
+    &lt;oauthConsumerKey>Jp1GdkPACkzRAly8e1tg8U1wl5Aa&lt;/oauthConsumerKey>
+    &lt;oauthConsumerSecret>IOY5qpCFvtej_ZjaNym90Skozpca&lt;/oauthConsumerSecret>
+    &lt;applicationName>Reseller_Portal_OIDC&lt;/applicationName>
+    &lt;callbackUrl&gt;http://localhost:4200/callback&lt;/callbackUrl>
+    &lt;oauthVersion>OAuth-2.0&lt;/oauthVersion>
+    &lt;grantTypes>refresh_token urn:ietf:params:oauth:grant-type:saml2-bearer implicit password client_credentials iwa:ntlm authorization_code urn:ietf:params:oauth:grant-type:uma-ticket urn:ietf:params:oauth:grant-type:jwt-bearer &lt;/grantTypes>
+    &lt;scopeValidators/>
+    &lt;pkceSupportPlain>true&lt;/pkceSupportPlain>
+    &lt;pkceMandatory>false&lt;/pkceMandatory>
+    &lt;userAccessTokenExpiryTime>600&lt;/userAccessTokenExpiryTime>
+    &lt;applicationAccessTokenExpiryTime>3600&lt;/applicationAccessTokenExpiryTime>
+    &lt;refreshTokenExpiryTime>8460&lt;/refreshTokenExpiryTime>
+    &lt;idTokenExpiryTime>3600&lt;/idTokenExpiryTime>
+    &lt;audiences/>
+    &lt;bypassClientCredentials>false&lt;/bypassClientCredentials>
+    &lt;renewRefreshTokenEnabled>true&lt;/renewRefreshTokenEnabled>
+    &lt;requestObjectSignatureValidationEnabled>false&lt;/requestObjectSignatureValidationEnabled>
+    &lt;idTokenEncryptionEnabled>false&lt;/idTokenEncryptionEnabled>
+    &lt;idTokenEncryptionAlgorithm>null&lt;/idTokenEncryptionAlgorithm>
+    &lt;idTokenEncryptionMethod>null&lt;/idTokenEncryptionMethod>
+    &lt;tokenType>Default&lt;/tokenType>
+&lt;/oAuthAppDO>
+]]&gt;&lt;/inboundConfiguration>
+        &lt;Properties/>
+      &lt;/InboundAuthenticationRequestConfig>
+      &lt;InboundAuthenticationRequestConfig>
+        &lt;InboundAuthKey>sp1&lt;/InboundAuthKey>
+        &lt;InboundAuthType>openid&lt;/InboundAuthType>
+        &lt;InboundConfigType>standardAPP&lt;/InboundConfigType>
+        &lt;Properties/>
+      &lt;/InboundAuthenticationRequestConfig>
+    &lt;/InboundAuthenticationRequestConfigs>
+  &lt;/InboundAuthenticationConfig>
+  &lt;LocalAndOutBoundAuthenticationConfig>
+    &lt;AuthenticationSteps/>
+    &lt;AuthenticationType>default&lt;/AuthenticationType>
+    &lt;alwaysSendBackAuthenticatedListOfIdPs>false&lt;/alwaysSendBackAuthenticatedListOfIdPs>
+    &lt;subjectClaimUri>http://wso2.org/claims/username&lt;/subjectClaimUri>
+    &lt;UseTenantDomainInUsername>false&lt;/UseTenantDomainInUsername>
+    &lt;UseUserstoreDomainInRoles>true&lt;/UseUserstoreDomainInRoles>
+    &lt;UseUserstoreDomainInUsername>false&lt;/UseUserstoreDomainInUsername>
+    &lt;EnableAuthorization>false&lt;/EnableAuthorization>
+  &lt;/LocalAndOutBoundAuthenticationConfig>
+  &lt;RequestPathAuthenticatorConfigs/>
+  &lt;InboundProvisioningConfig>
+    &lt;ProvisioningUserStore/>
+    &lt;IsProvisioningEnabled>false&lt;/IsProvisioningEnabled>
+    &lt;IsDumbModeEnabled>false&lt;/IsDumbModeEnabled>
+  &lt;/InboundProvisioningConfig>
+  &lt;OutboundProvisioningConfig>
+    &lt;ProvisioningIdentityProviders/>
+  &lt;/OutboundProvisioningConfig>
+  &lt;ClaimConfig>
+    &lt;RoleClaimURI/>
+    &lt;LocalClaimDialect>true&lt;/LocalClaimDialect>
+    &lt;IdpClaim/>
+    &lt;ClaimMappings>
+      &lt;ClaimMapping>
+        &lt;LocalClaim>
+          &lt;ClaimUri>http://wso2.org/claims/customer_type&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/LocalClaim>
+        &lt;RemoteClaim>
+          &lt;ClaimUri>http://wso2.org/claims/customer_type&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/RemoteClaim>
+        &lt;RequestClaim>true&lt;/RequestClaim>
+        &lt;MandatoryClaim>true&lt;/MandatoryClaim>
+      &lt;/ClaimMapping>
+      &lt;ClaimMapping>
+        &lt;LocalClaim>
+          &lt;ClaimUri>http://wso2.org/claims/shopid&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/LocalClaim>
+        &lt;RemoteClaim>
+          &lt;ClaimUri>http://wso2.org/claims/shopid&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/RemoteClaim>
+        &lt;RequestClaim>true&lt;/RequestClaim>
+        &lt;MandatoryClaim>true&lt;/MandatoryClaim>
+      &lt;/ClaimMapping>
+      &lt;ClaimMapping>
+        &lt;LocalClaim>
+          &lt;ClaimUri>http://wso2.org/claims/user_role&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/LocalClaim>
+        &lt;RemoteClaim>
+          &lt;ClaimUri>http://wso2.org/claims/user_role&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/RemoteClaim>
+        &lt;RequestClaim>true&lt;/RequestClaim>
+        &lt;MandatoryClaim>true&lt;/MandatoryClaim>
+      &lt;/ClaimMapping>
+      &lt;ClaimMapping>
+        &lt;LocalClaim>
+          &lt;ClaimUri>http://wso2.org/claims/emailaddress&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/LocalClaim>
+        &lt;RemoteClaim>
+          &lt;ClaimUri>http://wso2.org/claims/emailaddress&lt;/ClaimUri>
+          &lt;claimId>0&lt;/claimId>
+        &lt;/RemoteClaim>
+        &lt;RequestClaim>true&lt;/RequestClaim>
+        &lt;MandatoryClaim>true&lt;/MandatoryClaim>
+      &lt;/ClaimMapping>
+    &lt;/ClaimMappings>
+    &lt;AlwaysSendMappedLocalSubjectId>false&lt;/AlwaysSendMappedLocalSubjectId>
+    &lt;SPClaimDialects/>
+  &lt;/ClaimConfig>
+  &lt;PermissionAndRoleConfig>
+    &lt;Permissions/>
+    &lt;RoleMappings/>
+    &lt;IdpRoles/>
+  &lt;/PermissionAndRoleConfig>
+  &lt;IsSaaSApp>false&lt;/IsSaaSApp>
+&lt;/ServiceProvider></xsd1:content>
+</xsd:spFileContent>
+</xsd:importApplication>

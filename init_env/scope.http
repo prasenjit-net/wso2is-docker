@@ -1,0 +1,13 @@
+POST /services/OAuthAdminService.OAuthAdminServiceHttpsEndpoint/ HTTP/1.1
+Host: localhost
+Content-Type: application/xml
+Authorization: Basic admin admin
+
+<xsd:updateScope xmlns:xsd="http://org.apache.axis2/xsd">
+    <!--Optional:-->
+    <xsd:scope>openid</xsd:scope>
+    <!--Zero or more repetitions:-->
+    <xsd:addClaims>shopid</xsd:addClaims>
+    <xsd:addClaims>customer_type</xsd:addClaims>
+    <xsd:addClaims>user_role</xsd:addClaims>
+</xsd:updateScope>

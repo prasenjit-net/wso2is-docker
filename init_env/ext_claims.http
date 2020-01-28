@@ -1,0 +1,100 @@
+POST /services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/ HTTP/1.1
+Host: localhost
+Content-Type: application/xml
+Authorization: Basic admin admin
+
+<xsd:addExternalClaim xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd">
+    <xsd:externalClaim>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>Description</xsd1:propertyName>
+            <xsd1:propertyValue>Tele2 Reseller Shop ID</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>DisplayOrder</xsd1:propertyName>
+            <xsd1:propertyValue>1</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>MappedLocalClaim</xsd1:propertyName>
+            <xsd1:propertyValue>http://wso2.org/claims/shopid</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>
+            <xsd1:propertyValue>true</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>DisplayName</xsd1:propertyName>
+            <xsd1:propertyValue>Tele2 Reseller Shop ID</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:externalClaimDialectURI>http://wso2.org/oidc/claim</xsd1:externalClaimDialectURI>
+        <xsd1:externalClaimURI>shopid</xsd1:externalClaimURI>
+        <xsd1:mappedLocalClaimURI>http://wso2.org/claims/shopid</xsd1:mappedLocalClaimURI>
+    </xsd:externalClaim>
+</xsd:addExternalClaim>
+
+###
+POST /services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/ HTTP/1.1
+Host: localhost
+Content-Type: application/xml
+Authorization: Basic admin admin
+
+<xsd:addExternalClaim xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd">
+    <xsd:externalClaim>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>Description</xsd1:propertyName>
+            <xsd1:propertyValue>Tele2 Reseller User Role</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>DisplayOrder</xsd1:propertyName>
+            <xsd1:propertyValue>1</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>MappedLocalClaim</xsd1:propertyName>
+            <xsd1:propertyValue>http://wso2.org/claims/user_role</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>
+            <xsd1:propertyValue>true</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>DisplayName</xsd1:propertyName>
+            <xsd1:propertyValue>Tele2 Reseller Shop ID</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:externalClaimDialectURI>http://wso2.org/oidc/claim</xsd1:externalClaimDialectURI>
+        <xsd1:externalClaimURI>user_role</xsd1:externalClaimURI>
+        <xsd1:mappedLocalClaimURI>http://wso2.org/claims/user_role</xsd1:mappedLocalClaimURI>
+    </xsd:externalClaim>
+</xsd:addExternalClaim>
+
+###
+POST /services/ClaimMetadataManagementService.ClaimMetadataManagementServiceHttpsEndpoint/ HTTP/1.1
+Host: localhost
+Content-Type: application/xml
+Authorization: Basic admin admin
+
+<xsd:addExternalClaim xmlns:xsd="http://org.apache.axis2/xsd" xmlns:xsd1="http://dto.mgt.metadata.claim.identity.carbon.wso2.org/xsd">
+    <xsd:externalClaim>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>Description</xsd1:propertyName>
+            <xsd1:propertyValue>Tele2 Reseller Customer Type</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>DisplayOrder</xsd1:propertyName>
+            <xsd1:propertyValue>1</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>MappedLocalClaim</xsd1:propertyName>
+            <xsd1:propertyValue>http://wso2.org/claims/customer_type</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>SupportedByDefault</xsd1:propertyName>
+            <xsd1:propertyValue>true</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:claimProperties>
+            <xsd1:propertyName>DisplayName</xsd1:propertyName>
+            <xsd1:propertyValue>Tele2 Reseller Customer Type</xsd1:propertyValue>
+        </xsd1:claimProperties>
+        <xsd1:externalClaimDialectURI>http://wso2.org/oidc/claim</xsd1:externalClaimDialectURI>
+        <xsd1:externalClaimURI>customer_type</xsd1:externalClaimURI>
+        <xsd1:mappedLocalClaimURI>http://wso2.org/claims/customer_type</xsd1:mappedLocalClaimURI>
+    </xsd:externalClaim>
+</xsd:addExternalClaim>
