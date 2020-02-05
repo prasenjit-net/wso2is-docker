@@ -17,6 +17,10 @@ entryPoints:
     address: ":80"
   websecure:
     address: ":443"
+  prom:
+    address: ":9090"
 ## Static configuration
 serversTransport:
   insecureSkipVerify: true
+metrics:
+  prometheus: {}

@@ -1,0 +1,29 @@
+global:
+  scrape_interval: 10s
+  scrape_timeout: 10s
+  evaluation_interval: 10s
+scrape_configs:
+  # - job_name: wso2is
+  #   static_configs:
+  #     - targets:
+  #       - "wso2is:8080"
+  #       labels:
+  #         name: wso2is
+  #         type: app
+  - job_name: 'wso2is'
+    dns_sd_configs:
+    - names:
+      - 'tasks.wso2is'
+      type: 'A'
+      port: 8080
+  - job_name: traefik
+    scrape_interval: 10s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    static_configs:
+      - targets: 
+        - "traefik:8080"
+        labels:
+          app: traefik
+          type: gateway
+      

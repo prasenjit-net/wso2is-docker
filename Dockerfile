@@ -1,5 +1,10 @@
 FROM wso2/wso2is:5.8.0
 
+# Add prometheus support
+COPY --chown=wso2carbon:wso2 ./wso2is/jmx_prometheus_javaagent-0.12.0.jar ${WSO2_SERVER_HOME}/bin/
+COPY --chown=wso2carbon:wso2 ./wso2is/is.yml ${WSO2_SERVER_HOME}/bin/
+COPY --chown=wso2carbon:wso2 ./wso2is/wso2server.sh ${WSO2_SERVER_HOME}/bin/
+
 # Add mysql driver jar
 COPY --chown=wso2carbon:wso2 ./wso2is/mysql-connector-java-8.0.18.jar ${WSO2_SERVER_HOME}/repository/components/lib/
 COPY --chown=wso2carbon:wso2 ./wso2is/release/authenticationendpoint.war ${WSO2_SERVER_HOME}/repository/deployment/server/webapps/authenticationendpoint.war

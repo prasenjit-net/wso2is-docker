@@ -7,6 +7,7 @@ services:
       - "80:80"
       - "443:443"
       - "8080:8080"
+      - "9090:9090"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     secrets:
@@ -32,7 +33,7 @@ services:
         mode: 0440
 
   wso2is:
-    image: identityorg/wso2is58:1.4
+    image: identityorg/wso2is58:test
     depends_on:
       - mysql
     networks:
@@ -135,6 +136,18 @@ services:
       - ./scripts/:/docker-entrypoint-initdb.d/
       - mysqldata:/var/lib/mysql/
 
+  prometheus:
+    image: prom/prometheus:v2.15.2
+    networks:
+      - wso2cluster
+    labels:
+      - "enabletraefik=true"
+      - "traefik.http.routers.prom-web.rule=Host(`localhost`)"
+      - "traefik.http.routers.prom-web.entrypoints=prom"
+    configs:
+      - source: prometheus
+        target: /etc/prometheus/prometheus.yml
+
 volumes:
   mysqldata:
 
@@ -174,6 +187,8 @@ configs:
     file: ./traefik/traefik-dyn.yml
   application-authentication:
     file: ./wso2is/application-authentication.xml
+  prometheus:
+    file: ./prom/prometheus.yml
 
 secrets:
   traefik-key:
