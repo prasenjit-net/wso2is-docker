@@ -53,6 +53,21 @@ services:
       - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.httpOnly=true"
       - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.secure=true"
     deploy:
+      labels:
+        - "enabletraefik=true"
+        - "traefik.http.middlewares.wso2is-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.wso2is-web.middlewares=wso2is-redirect"
+        - "traefik.http.routers.wso2is-web.rule=Host(`localhost`)"
+        - "traefik.http.routers.wso2is-web.entrypoints=web"
+        - "traefik.http.routers.wso2is.rule=Host(`localhost`)"
+        - "traefik.http.routers.wso2is.entrypoints=websecure"
+        - "traefik.http.routers.wso2is.tls=true"
+        - "traefik.http.services.wso2is-service.loadbalancer.server.port=9443"
+        - "traefik.http.services.wso2is-service.loadbalancer.server.scheme=https"
+        - "traefik.http.services.wso2is-service.loadbalancer.sticky=true"
+        - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.name=traefik_xxx_cookie"
+        - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.httpOnly=true"
+        - "traefik.http.services.wso2is-service.loadbalancer.sticky.cookie.secure=true"
       replicas: 1
       update_config:
         parallelism: 1
