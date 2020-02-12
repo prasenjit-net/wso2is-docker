@@ -2,7 +2,7 @@
 providers:
   docker:
     constraints: "Label(`enabletraefik`,`true`)"
-    # swarmMode: true
+    swarmMode: true
     # network: wso2cluster
   file:
     filename: /etc/traefik/traefik-dyn.yml
