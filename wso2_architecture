@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-13T11:09:31.836Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="D7Bt1kx9dpMRPIaVwFPH" version="14.6.12" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-13T11:11:11.779Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="9hB5mLiPqmDahLax_9LF" version="14.6.12" type="github">
   <diagram id="EEcGfF2WclIRIt26SJ49" name="Page-1">
     <mxGraphModel dx="2013" dy="1830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -136,8 +136,8 @@
         <mxCell id="MNhzB5ZgpvR-2wtRJRLq-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-39" target="MNhzB5ZgpvR-2wtRJRLq-38">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-39" value="WSO2 IS has 2 tenants" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
-          <mxGeometry x="990" y="145" width="110.00000000000001" height="80" as="geometry" />
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-39" value="WSO2 IS has 2 tenants&lt;br&gt;1. business.tele2.nl&lt;br&gt;2. consumer.tele2.nl" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
+          <mxGeometry x="930" y="145" width="170" height="105" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
