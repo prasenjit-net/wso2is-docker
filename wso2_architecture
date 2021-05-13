@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-13T11:11:11.779Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="9hB5mLiPqmDahLax_9LF" version="14.6.12" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-13T11:19:23.973Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="F2vbhrhMZX2856H9u8hT" version="14.6.12" type="github">
   <diagram id="EEcGfF2WclIRIt26SJ49" name="Page-1">
-    <mxGraphModel dx="2013" dy="1830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2222" dy="1947" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -85,6 +85,9 @@
         <mxCell id="MNhzB5ZgpvR-2wtRJRLq-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-18" target="MNhzB5ZgpvR-2wtRJRLq-25">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-18" target="MNhzB5ZgpvR-2wtRJRLq-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="MNhzB5ZgpvR-2wtRJRLq-18" value="WSO2 IS Node" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="640" width="220" height="200" as="geometry" />
         </mxCell>
@@ -138,6 +141,60 @@
         </mxCell>
         <mxCell id="MNhzB5ZgpvR-2wtRJRLq-39" value="WSO2 IS has 2 tenants&lt;br&gt;1. business.tele2.nl&lt;br&gt;2. consumer.tele2.nl" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
           <mxGeometry x="930" y="145" width="170" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.375;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-41" target="MNhzB5ZgpvR-2wtRJRLq-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=30;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-41" target="MNhzB5ZgpvR-2wtRJRLq-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-41" value="BP" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="360" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-42" target="MNhzB5ZgpvR-2wtRJRLq-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-42" value="TSC" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1201" y="420" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=30;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-43" target="MNhzB5ZgpvR-2wtRJRLq-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-43" value="Calvi" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="420" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-44" value="Evolve" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="525" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-45" value="Nemo" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="545" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-49" value="OpenID Connect" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
+          <mxGeometry x="880" y="310" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.375;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-55" target="MNhzB5ZgpvR-2wtRJRLq-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-55" value="DSL" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1161" y="-20" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.625;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-56" target="MNhzB5ZgpvR-2wtRJRLq-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-56" value="CSR" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="-20" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MNhzB5ZgpvR-2wtRJRLq-60" target="MNhzB5ZgpvR-2wtRJRLq-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-60" value="Also has a custom way to get token on behalf of another user" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="100" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-62" value="Interraction Model" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="40" width="125" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MNhzB5ZgpvR-2wtRJRLq-63" value="SMS Service" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="950" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
